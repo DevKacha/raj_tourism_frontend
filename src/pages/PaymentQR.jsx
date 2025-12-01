@@ -18,7 +18,7 @@ export default function PaymentQR() {
           <div className="flex items-center space-x-4 mb-6">
             <div className="w-16 h-16  rounded-full flex items-center justify-center ">
               <img
-                src="src\assets\raj_tourism_logo.png"
+                src="src\assets\raj_tourism\rt-logo_final.png"
                 alt="Raj Tourism Logo"
                 className="w-full object-cover"
               />
@@ -56,7 +56,7 @@ export default function PaymentQR() {
                 <div className="relative bg-white p-8 rounded-3xl shadow-2xl border-4 border-blue-500">
                   <div className="w-100 h-full bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl flex items-center justify-center">
                     <img
-                      src="src/assets/qrcode.png"
+                      src="src\assets\raj_tourism\image.png"
                       alt="Payment QR Code"
                       className="w-full h-80 object-contain rounded-xl"
                     />

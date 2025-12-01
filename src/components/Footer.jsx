@@ -11,7 +11,7 @@ export default function Footer() {
             <div className="flex items-center gap-2 mb-4">
               <div className="w-10 h-10 rounded-lg flex items-center justify-center">
                 <img
-                  src="src/assets/raj_tourism_logo.png"
+                  src="src\assets\raj_tourism\rt-logo_final.png"
                   alt="Raj Tourism Logo"
                   className="w-full object-cover"
                 />
