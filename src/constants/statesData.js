@@ -1,6 +1,7 @@
 // State Data Configuration
 // Maps state slugs to their specific content and tour IDs from indiaData.js
 import { getTourImages } from '../utils/imageHelper';
+import logo from '../assets/default/default.jpg';
 
 export const statesData = {
     goa: {
@@ -264,7 +265,7 @@ export const statesData = {
     "tamil-nadu": {
         name: "Tamil Nadu",
         heroImages: [
-            '../src/assets/default/default.jpg'
+            logo
         ],
         heroContent: {
             title: "TAMIL NADU TOURISM",
