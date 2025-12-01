@@ -15,6 +15,8 @@ import {
   TrendingUp,
   CheckCircle2,
 } from "lucide-react";
+import s from "../assets/raj_tourism/saroj_bhuptani.png";
+import r from "../assets/raj_tourism/raj_bhuptani.jpeg";
 
 const About = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -285,7 +287,7 @@ const About = () => {
                     >
                       <div className="w-48 h-48 rounded-full bg-white p-2 shadow-2xl overflow-hidden">
                         <img
-                          src="src\assets\raj_tourism\saroj_bhuptani.png"
+                          src={s}
                           alt="Saroj Bhuptani"
                           className={`w-full h-full rounded-full object-cover transition-transform duration-500 ${
                             activeCard === "founder"
@@ -386,7 +388,7 @@ const About = () => {
                     >
                       <div className="w-48 h-48 rounded-full bg-white p-2 shadow-2xl overflow-hidden">
                         <img
-                          src="src\assets\raj_tourism\raj_bhuptani.jpeg"
+                          src={r}
                           alt="Raj Bhuptani"
                           className={`w-full h-full rounded-full object-cover transition-transform duration-500 ${
                             activeCard === "proprietor"
