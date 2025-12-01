@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* Hide horizontal overflow globally to prevent unwanted scrollbars on mobile */
+html, body { overflow-x: hidden; }
+/* optional: hide scrollbar visually on supported browsers */
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+@tailwind components;
+@tailwind utilities;
+/* optional: hide scrollbar visually on supported browsers */
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* make the container smoother on touch (optional) */
+.scroll-pl-6 { scroll-padding-left: 1.5rem; }
+
+/* small tweak so snap centers nicely on iOS */
+ul[role="list"] > li { scroll-snap-align: center; }
+
