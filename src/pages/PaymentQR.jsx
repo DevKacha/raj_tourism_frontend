@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Footer from "../components/Footer";
+import logo from "../assets/raj_tourism/image.png";
 
 export default function PaymentQR() {
   return (
@@ -56,7 +57,7 @@ export default function PaymentQR() {
                 <div className="relative bg-white p-8 rounded-3xl shadow-2xl border-4 border-blue-500">
                   <div className="w-100 h-full bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl flex items-center justify-center">
                     <img
-                      src="src\assets\raj_tourism\image.png"
+                      src={logo}
                       alt="Payment QR Code"
                       className="w-full h-80 object-contain rounded-xl"
                     />
