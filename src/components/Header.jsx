@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Sidebar from "./Sidebar";
+import logo from "../assets/raj_tourism/rt-logo_final.png"
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -69,7 +70,7 @@ export default function Header() {
                   RT
                 </span> */}
                 <img
-                  src="src\assets\raj_tourism\rt-logo_final.png"
+                  src={logo}
                   alt="Raj Tourism Logo"
                   className="w-full object-cover rounded-lg"
                 />
