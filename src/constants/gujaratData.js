@@ -111,6 +111,7 @@ export const tours = [
 export const featuredExperiences = [
     {
         id: 1,
+        packageId: 1,
         title: "Somnath Spiritual Journey",
         description: "Experience divine temples and sacred rituals",
         image: getTourImages('gujarat', 1).galleryImages[1],
@@ -118,13 +119,15 @@ export const featuredExperiences = [
     },
     {
         id: 2,
+        packageId: 2,
         title: "Rann Utsav Experience",
         description: "White desert magic under starlit skies",
         image: getTourImages('gujarat', 2).image,
         buttonText: "View Package",
     },
     {
-        id: 1,
+        id: 3,
+        packageId: 1,
         title: "Gir National Park Wildlife",
         description: "Home of the majestic Asiatic Lions",
         image: getTourImages('gujarat', 1).image,

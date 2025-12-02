@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logo from "../assets/raj_tourism/rt-logo_final.png";
+import logo from "../assets/raj_tourism/rt-logo.png";
 
 export default function Footer() {
   return (

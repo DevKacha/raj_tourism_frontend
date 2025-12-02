@@ -4,6 +4,8 @@ import Footer from "../components/Footer";
 import { tours as gujaratTours, inclusions as gujaratInclusions, exclusions as gujaratExclusions } from "../constants/gujaratData";
 import { tours as indiaTours, inclusions as indiaInclusions, exclusions as indiaExclusions } from "../constants/indiaData";
 import { tours as internationalTours, inclusions as internationalInclusions, exclusions as internationalExclusions } from "../constants/internationalData";
+import jsPDF from 'jspdf';
+import autoTable from 'jspdf-autotable';
 
 
 // ==================== ICONS ====================
@@ -212,6 +214,22 @@ const Moon = ({ className }) => (
   </svg>
 );
 
+const Download = ({ className }) => (
+  <svg
+    className={className}
+    width="20"
+    height="20"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+  >
+    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+    <polyline points="7 10 12 15 17 10"></polyline>
+    <line x1="12" y1="15" x2="12" y2="3"></line>
+  </svg>
+);
+
 // ==================== MAIN COMPONENT ====================
 const PackageDetails = () => {
   const { id } = useParams();
@@ -311,17 +329,123 @@ const PackageDetails = () => {
     }
   }, [activeDay]);
 
-  // Smooth scroll to active card when expanded
-  useEffect(() => {
-    if (activeDay !== -1 && cardRefs.current[activeDay]) {
-      setTimeout(() => {
-        cardRefs.current[activeDay].scrollIntoView({
-          behavior: 'smooth',
-          block: 'nearest',
-        });
-      }, 100); // Small delay to allow card expansion animation to start
+  const handleDownloadPDF = () => {
+    const doc = new jsPDF();
+
+    // Colors
+    const orange = [234, 88, 12]; // #ea580c
+    const gray = [75, 85, 99]; // #4b5563
+    const lightGray = [243, 244, 246]; // #f3f4f6
+
+    // Header
+    doc.setFontSize(22);
+    doc.setTextColor(...orange);
+    doc.text("Raj Tourism", 20, 20);
+
+    doc.setFontSize(10);
+    doc.setTextColor(...gray);
+    doc.text("Contact: +91 98250 12345", 190, 15, { align: "right" });
+    doc.text("Email: info@rajtourism.com", 190, 20, { align: "right" });
+    doc.text("Website: www.rajtourism.com", 190, 25, { align: "right" });
+
+    doc.setDrawColor(...orange);
+    doc.setLineWidth(0.5);
+    doc.line(20, 30, 190, 30);
+
+    // Package Title
+    doc.setFontSize(24);
+    doc.setTextColor(0, 0, 0);
+    doc.text(pkg.title, 20, 45);
+
+    // Info Line
+    doc.setFontSize(12);
+    doc.setTextColor(...gray);
+    doc.text(`${pkg.duration} | ${pkg.location} | ${pkg.rating} Stars`, 20, 55);
+
+    // Overview
+    doc.setFontSize(14);
+    doc.setTextColor(...orange);
+    doc.text("Overview", 20, 70);
+    doc.setFontSize(10);
+    doc.setTextColor(0, 0, 0);
+
+    const overviewText = `Experience the best of ${pkg.location} with our ${pkg.title} package. This carefully curated tour offers a perfect blend of sightseeing, culture, and relaxation. Enjoy comfortable accommodations, guided tours, and memorable experiences throughout your ${pkg.duration} journey.`;
+    const overviewLines = doc.splitTextToSize(overviewText, 170);
+    doc.text(overviewLines, 20, 80);
+
+    let yPos = 80 + (overviewLines.length * 5) + 10;
+
+    // Itinerary
+    doc.setFontSize(14);
+    doc.setTextColor(...orange);
+    doc.text("Itinerary", 20, yPos);
+    yPos += 10;
+
+    const itineraryData = itinerary.map(day => [
+      `Day ${day.day}`,
+      day.title,
+      day.description,
+      day.meals.join(", ")
+    ]);
+
+    autoTable(doc, {
+      startY: yPos,
+      head: [['Day', 'Title', 'Description', 'Meals']],
+      body: itineraryData,
+      headStyles: { fillColor: orange, textColor: [255, 255, 255] },
+      columnStyles: {
+        0: { cellWidth: 20, fontStyle: 'bold' },
+        1: { cellWidth: 40, fontStyle: 'bold' },
+        2: { cellWidth: 'auto' },
+        3: { cellWidth: 30 }
+      },
+      alternateRowStyles: { fillColor: lightGray },
+      margin: { top: 20 },
+    });
+
+    yPos = doc.lastAutoTable.finalY + 15;
+
+    // Inclusions & Exclusions
+    if (yPos > 250) {
+      doc.addPage();
+      yPos = 20;
     }
-  }, [activeDay]);
+
+    doc.setFontSize(14);
+    doc.setTextColor(...orange);
+    doc.text("Inclusions & Exclusions", 20, yPos);
+    yPos += 10;
+
+    const maxRows = Math.max(inclusions.length, exclusions.length);
+    const incExcData = [];
+    for (let i = 0; i < maxRows; i++) {
+      incExcData.push([
+        inclusions[i] || "",
+        exclusions[i] || ""
+      ]);
+    }
+
+    autoTable(doc, {
+      startY: yPos,
+      head: [['Inclusions', 'Exclusions']],
+      body: incExcData,
+      headStyles: { fillColor: orange, textColor: [255, 255, 255] },
+      alternateRowStyles: { fillColor: lightGray },
+      margin: { top: 20 },
+    });
+
+    // Footer
+    const pageCount = doc.internal.getNumberOfPages();
+    for (let i = 1; i <= pageCount; i++) {
+      doc.setPage(i);
+      doc.setFontSize(8);
+      doc.setTextColor(...gray);
+      doc.text(`Page ${i} of ${pageCount}`, 105, 290, { align: "center" });
+      doc.text(`Generated on ${new Date().toLocaleDateString()}`, 190, 290, { align: "right" });
+    }
+
+    doc.save(`${pkg.title.replace(/\s+/g, '_')}_Brochure.pdf`);
+  };
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -365,6 +489,15 @@ const PackageDetails = () => {
           >
             <ChevronLeft className="w-5 h-5" />
             Back
+          </button>
+
+          {/* Download PDF Button */}
+          <button
+            onClick={handleDownloadPDF}
+            className="absolute top-20 right-6 bg-orange-600/90 backdrop-blur-md border border-orange-500/20 text-white px-5 py-2.5 rounded-full flex items-center gap-2 hover:bg-orange-600 hover:scale-105 transition-all duration-300 active:scale-95 shadow-lg"
+          >
+            <Download className="w-5 h-5" />
+            Download Brochure
           </button>
 
           {/* Package Info Overlay */}

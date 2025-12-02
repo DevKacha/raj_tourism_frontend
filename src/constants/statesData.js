@@ -33,6 +33,7 @@ export const statesData = {
         featuredExperiences: [
             {
                 id: 1,
+                packageId: 100,
                 title: "Sunset Cruise",
                 description: "Sail along the Mandovi River at sunset",
                 image: getTourImages('india', 100).galleryImages[0],
@@ -40,6 +41,7 @@ export const statesData = {
             },
             {
                 id: 2,
+                packageId: 100,
                 title: "Dudhsagar Trek",
                 description: "Adventure trek to the majestic waterfalls",
                 image: getTourImages('india', 100).galleryImages[1],
@@ -76,6 +78,7 @@ export const statesData = {
         featuredExperiences: [
             {
                 id: 1,
+                packageId: 101,
                 title: "Desert Safari",
                 description: "Camel ride and camping in the Thar Desert",
                 image: getTourImages('india', 101).galleryImages[0],
@@ -83,6 +86,7 @@ export const statesData = {
             },
             {
                 id: 2,
+                packageId: 101,
                 title: "Palace Stay",
                 description: "Luxury accommodation in heritage palaces",
                 image: getTourImages('india', 101).galleryImages[1],
@@ -119,6 +123,7 @@ export const statesData = {
         featuredExperiences: [
             {
                 id: 1,
+                packageId: 110,
                 title: "Houseboat Cruise",
                 description: "Overnight stay on a traditional houseboat",
                 image: getTourImages('india', 110).galleryImages[0],
@@ -126,6 +131,7 @@ export const statesData = {
             },
             {
                 id: 2,
+                packageId: 110,
                 title: "Tea Tasting",
                 description: "Sample fresh tea in the hills of Munnar",
                 image: getTourImages('india', 110).galleryImages[1],
@@ -162,6 +168,7 @@ export const statesData = {
         featuredExperiences: [
             {
                 id: 1,
+                packageId: 105,
                 title: "Paragliding",
                 description: "Soar high above the valleys in Bir Billing or Solang",
                 image: getTourImages('india', 105).galleryImages[0],
@@ -169,6 +176,7 @@ export const statesData = {
             },
             {
                 id: 2,
+                packageId: 105,
                 title: "River Rafting",
                 description: "Thrilling rafting on the Beas River",
                 image: getTourImages('india', 105).galleryImages[1],
@@ -205,6 +213,7 @@ export const statesData = {
         featuredExperiences: [
             {
                 id: 1,
+                packageId: 104,
                 title: "Ganga Aarti",
                 description: "Witness the divine evening ritual at Har Ki Pauri",
                 image: getTourImages('india', 104).galleryImages[0],
@@ -212,6 +221,7 @@ export const statesData = {
             },
             {
                 id: 2,
+                packageId: 103,
                 title: "Skiing in Auli",
                 description: "World-class skiing slopes with Nanda Devi views",
                 image: getTourImages('india', 103).galleryImages[0],
@@ -248,6 +258,7 @@ export const statesData = {
         featuredExperiences: [
             {
                 id: 1,
+                packageId: 109,
                 title: "Cave Exploration",
                 description: "Visit the ancient Karla and Bhaja caves",
                 image: getTourImages('india', 109).galleryImages[0],
@@ -255,6 +266,7 @@ export const statesData = {
             },
             {
                 id: 2,
+                packageId: 109,
                 title: "Strawberry Picking",
                 description: "Fresh strawberries at Mapro Garden",
                 image: getTourImages('india', 109).galleryImages[1],

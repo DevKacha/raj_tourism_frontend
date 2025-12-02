@@ -7,6 +7,7 @@ import {
     Star,
     ArrowRight,
     MapPin,
+    Search,
 } from "lucide-react";
 import Footer from "./Footer";
 
@@ -21,6 +22,12 @@ const TourismTemplate = ({
     const [currentSlide, setCurrentSlide] = useState(0);
     const [likedTours, setLikedTours] = useState({});
     const [showAllPackages, setShowAllPackages] = useState(false);
+    const [searchQuery, setSearchQuery] = useState("");
+
+    const filteredTours = tours.filter((tour) =>
+        tour.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        tour.location.toLowerCase().includes(searchQuery.toLowerCase())
+    );
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -159,72 +166,100 @@ const TourismTemplate = ({
                         </div>
                     ) : (
                         <>
-                            {/* Tours Grid */}
-                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-                                {(showAllPackages ? tours : tours.slice(0, 8)).map((tour) => (
-                                    <div
-                                        key={tour.id}
-                                        onClick={() =>
-                                            navigate(`/package-details/${tour.id}`, {
-                                                state: { package: tour },
-                                            })
-                                        }
-                                        className="bg-white rounded-xl overflow-hidden border border-gray-200 hover:shadow-xl transition-all duration-300 group cursor-pointer"
-                                    >
-                                        {/* Tour Image */}
-                                        <div className="relative h-48 overflow-hidden">
-                                            <img
-                                                src={tour.image}
-                                                alt={tour.title}
-                                                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                                            />
-
-                                            {/* Duration Badge */}
-                                            <div className="absolute top-3 left-3 bg-blue-600 text-white px-3 py-1 rounded text-xs font-semibold">
-                                                {tour.duration}
-                                            </div>
-                                        </div>
-
-                                        {/* Tour Details */}
-                                        <div className="p-4">
-                                            <div className="flex items-center gap-2 mb-2">
-                                                <MapPin className="w-4 h-4 text-gray-400" />
-                                                <span className="text-sm text-gray-600">
-                                                    {tour.location}
-                                                </span>
-                                            </div>
-
-                                            <h3 className="text-base font-semibold text-gray-900 mb-3 line-clamp-1">
-                                                {tour.title}
-                                            </h3>
-
-                                            <div className="flex items-center justify-between pt-3 border-t border-gray-100">
-                                                <div className="flex items-center gap-1">
-                                                    <Star className="w-4 h-4 fill-orange-400 text-orange-400" />
-                                                    <span className="text-sm font-semibold text-gray-900">
-                                                        {tour.rating}
-                                                    </span>
-                                                    <span className="text-xs text-gray-500">
-                                                        ({tour.reviews})
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                ))}
+                            {/* Search Bar */}
+                            <div className="relative max-w-md mx-auto mb-10">
+                                <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                                    <Search className="h-5 w-5 text-gray-400" />
+                                </div>
+                                <input
+                                    type="text"
+                                    className="block w-full pl-11 pr-4 py-3 border border-gray-200 rounded-full leading-5 bg-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 sm:text-sm shadow-sm transition-all duration-300 hover:shadow-md"
+                                    placeholder="Search packages, locations..."
+                                    value={searchQuery}
+                                    onChange={(e) => setSearchQuery(e.target.value)}
+                                />
                             </div>
 
-                            {/* View All Packages Button */}
-                            {tours.length > 8 && (
-                                <div className="text-center">
+                            {/* Tours Grid or No Results */}
+                            {filteredTours.length === 0 ? (
+                                <div className="text-center py-12">
+                                    <p className="text-gray-500 text-lg">No packages found matching your search.</p>
                                     <button
-                                        onClick={() => setShowAllPackages(!showAllPackages)}
-                                        className="bg-orange-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-orange-700 transition-all duration-300 inline-flex items-center gap-2"
+                                        onClick={() => setSearchQuery("")}
+                                        className="mt-4 text-orange-600 font-semibold hover:text-orange-700 hover:underline"
                                     >
-                                        {showAllPackages ? "Show Less" : "View All Packages"}
-                                        <ArrowRight className={`w-5 h-5 transition-transform duration-300 ${showAllPackages ? "rotate-180" : ""}`} />
+                                        Clear Search
                                     </button>
                                 </div>
+                            ) : (
+                                <>
+                                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                                        {(showAllPackages ? filteredTours : filteredTours.slice(0, 8)).map((tour) => (
+                                            <div
+                                                key={tour.id}
+                                                onClick={() =>
+                                                    navigate(`/package-details/${tour.id}`, {
+                                                        state: { package: tour },
+                                                    })
+                                                }
+                                                className="bg-white rounded-xl overflow-hidden border border-gray-200 hover:shadow-xl transition-all duration-300 group cursor-pointer"
+                                            >
+                                                {/* Tour Image */}
+                                                <div className="relative h-48 overflow-hidden">
+                                                    <img
+                                                        src={tour.image}
+                                                        alt={tour.title}
+                                                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                                                    />
+
+                                                    {/* Duration Badge */}
+                                                    <div className="absolute top-3 left-3 bg-blue-600 text-white px-3 py-1 rounded text-xs font-semibold">
+                                                        {tour.duration}
+                                                    </div>
+                                                </div>
+
+                                                {/* Tour Details */}
+                                                <div className="p-4">
+                                                    <div className="flex items-center gap-2 mb-2">
+                                                        <MapPin className="w-4 h-4 text-gray-400" />
+                                                        <span className="text-sm text-gray-600">
+                                                            {tour.location}
+                                                        </span>
+                                                    </div>
+
+                                                    <h3 className="text-base font-semibold text-gray-900 mb-3 line-clamp-1">
+                                                        {tour.title}
+                                                    </h3>
+
+                                                    <div className="flex items-center justify-between pt-3 border-t border-gray-100">
+                                                        <div className="flex items-center gap-1">
+                                                            <Star className="w-4 h-4 fill-orange-400 text-orange-400" />
+                                                            <span className="text-sm font-semibold text-gray-900">
+                                                                {tour.rating}
+                                                            </span>
+                                                            <span className="text-xs text-gray-500">
+                                                                ({tour.reviews})
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        ))}
+                                    </div>
+
+                                    {/* View All Packages Button */}
+                                    {filteredTours.length > 8 && (
+                                        <div className="text-center">
+                                            <button
+                                                onClick={() => setShowAllPackages(!showAllPackages)}
+                                                className="bg-orange-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-orange-700 transition-all duration-300 inline-flex items-center gap-2"
+                                            >
+                                                {showAllPackages ? "Show Less" : "View All Packages"}
+                                                <ArrowRight className={`w-5 h-5 transition-transform duration-300 ${showAllPackages ? "rotate-180" : ""}`} />
+                                            </button>
+                                        </div>
+                                    )}
+                                </>
                             )}
                         </>
                     )}
@@ -295,7 +330,7 @@ const TourismTemplate = ({
                                                     {experience.description}
                                                 </p>
                                                 <button
-                                                    onClick={() => navigate(`/package-details/${experience.id}`)}
+                                                    onClick={() => navigate(`/package-details/${experience.packageId || experience.id}`)}
                                                     className="bg-white text-gray-900 px-6 py-2 rounded-full text-sm font-semibold hover:bg-gray-100 transition-all"
                                                 >
                                                     {experience.buttonText}

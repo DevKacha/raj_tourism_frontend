@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Footer from "../components/Footer";
 import logo from "../assets/raj_tourism/image.png";
-import logo_1 from "../assets/raj_tourism/rt-logo_final.png";
+import logo_1 from "../assets/raj_tourism/rt-logo.png";
 
 export default function PaymentQR() {
   return (
@@ -18,7 +18,7 @@ export default function PaymentQR() {
         </div>
         <div className="relative h-full flex flex-col items-center justify-center text-white px-4">
           <div className="flex items-center space-x-4 mb-6">
-            <div className="w-16 h-16  rounded-full flex items-center justify-center ">
+            <div className="w-20 h-20  rounded-full flex items-center justify-center ">
               <img
                 src={logo_1}
                 alt="Raj Tourism Logo"
