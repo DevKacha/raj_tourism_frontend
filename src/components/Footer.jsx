@@ -189,11 +189,23 @@ export default function Footer() {
             <div className="space-y-3">
               <div className="flex items-start gap-3 group">
                 <svg
-                  className="w-5 h-5 text-blue-600 mt-0.5"
+                  className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0 group-hover:scale-110 transition-transform"
                   fill="none"
                   stroke="currentColor"
+                  viewBox="0 0 24 24"
                 >
-                  <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                  />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                  />
                 </svg>
                 <p className="text-sm text-gray-600">
                   RAJ TOURISM, Rajkot
@@ -204,11 +216,17 @@ export default function Footer() {
 
               <div className="flex items-center gap-3 group">
                 <svg
-                  className="w-5 h-5 text-blue-600 flex-shrink-0"
+                  className="w-5 h-5 text-blue-600 flex-shrink-0 group-hover:scale-110 transition-transform"
                   fill="none"
                   stroke="currentColor"
+                  viewBox="0 0 24 24"
                 >
-                  <path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                  />
                 </svg>
                 <div>
                   <a
@@ -223,11 +241,17 @@ export default function Footer() {
 
               <div className="flex items-center gap-3 group">
                 <svg
-                  className="w-5 h-5 text-blue-600 flex-shrink-0"
+                  className="w-5 h-5 text-blue-600 flex-shrink-0 group-hover:scale-110 transition-transform"
                   fill="none"
                   stroke="currentColor"
+                  viewBox="0 0 24 24"
                 >
-                  <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  />
                 </svg>
                 <a
                   href="mailto:info@rajtourism.com"
@@ -255,8 +279,13 @@ export default function Footer() {
                 <svg
                   className="w-3.5 h-3.5 text-red-500 animate-pulse"
                   fill="currentColor"
+                  viewBox="0 0 20 20"
                 >
-                  <path d="M3.172..."></path>
+                  <path
+                    fillRule="evenodd"
+                    d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                    clipRule="evenodd"
+                  />
                 </svg>
                 <span className="text-xs text-gray-500">by</span>
 
@@ -264,9 +293,17 @@ export default function Footer() {
                   href="https://in.linkedin.com/in/dev-kacha-6bba66291"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="relative inline-flex items-center gap-1.5 px-3 py-1.5 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-full text-xs font-medium text-white transition-all"
+                  className="relative inline-flex items-center gap-1.5 px-3 py-1.5 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-full text-xs font-medium text-white hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-300 hover:scale-105 group overflow-hidden"
                 >
-                  Dev
+                  <span className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                  <svg
+                    className="w-3.5 h-3.5 relative z-10 group-hover:rotate-12 transition-transform"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z" />
+                  </svg>
+                  <span className="relative z-10">Dev</span>
                 </a>
 
                 <span className="text-xs text-gray-400">&</span>
@@ -275,9 +312,21 @@ export default function Footer() {
                   href="https://www.linkedin.com/in/devansh-ganatra-254336317/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="relative inline-flex items-center gap-1.5 px-3 py-1.5 bg-gradient-to-r from-purple-600 to-pink-500 rounded-full text-xs font-medium text-white transition-all"
+                  className="relative inline-flex items-center gap-1.5 px-3 py-1.5 bg-gradient-to-r from-purple-600 to-pink-500 rounded-full text-xs font-medium text-white hover:shadow-lg hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105 group overflow-hidden"
                 >
-                  Devansh
+                  <span className="absolute inset-0 bg-gradient-to-r from-pink-500 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                  <svg
+                    className="w-3.5 h-3.5 relative z-10 group-hover:rotate-12 transition-transform"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                  <span className="relative z-10">Devansh</span>
                 </a>
               </div>
             </div>

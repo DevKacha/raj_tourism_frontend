@@ -209,7 +209,7 @@ export const statesData = {
                 description: "Spiritual retreats and luxury ski resorts."
             }
         },
-        tourIds: [103, 104], // Delhi-Auli, Spiritual Circuit
+        tourIds: [103, 104, 111, 119], // Delhi-Auli, Spiritual Circuit
         featuredExperiences: [
             {
                 id: 1,
@@ -225,6 +225,14 @@ export const statesData = {
                 title: "Skiing in Auli",
                 description: "World-class skiing slopes with Nanda Devi views",
                 image: getTourImages('india', 103).galleryImages[0],
+                buttonText: "View Details"
+            },
+            {
+                id: 3,
+                packageId: 111,
+                title: "Char Dham Yatra (12D/11N)",
+                description: "  Complete Char Dham pilgrimage visiting Yamunotri, Gangotri, Kedarnath & Badrinath.",
+                image: getTourImages('india', 111).galleryImages?.[0] || getTourImages('india', 111).image,
                 buttonText: "View Details"
             }
         ]
@@ -274,29 +282,41 @@ export const statesData = {
             }
         ]
     },
-    "tamil-nadu": {
-        name: "Tamil Nadu",
+    andaman: {
+        name: "Andaman & Nicobar",
         heroImages: [
-            logo
+            getTourImages('india', 112).image,
+            getTourImages('india', 112).galleryImages?.[0],
+            getTourImages('india', 112).galleryImages?.[1],
+            getTourImages('india', 112).galleryImages?.[2]
         ],
         heroContent: {
-            title: "TAMIL NADU TOURISM",
-            subtitle: "Enchanting Tamil Nadu",
-            description: "Journey through the land of temples, culture, and heritage. Discover the architectural marvels and coastal beauty of Tamil Nadu."
+            title: "ANDAMAN & NICOBAR",
+            subtitle: "Islands of Adventure",
+            description: "Pristine beaches, crystal clear water and vibrant marine life."
         },
         sectionHeadings: {
             exploreTours: {
-                title: "Explore Tamil Nadu",
-                highlightWord: "Tamil Nadu",
-                description: "Experience the Dravidian grandeur, serene beaches, and vibrant festivals of the south."
+                title: "Explore Andaman",
+                highlightWord: "Andaman",
+                description: "Island hopping, snorkelling and colonial history."
             },
             premiumExperiences: {
-                badge: "TEMPLE TRAILS",
-                title: "Premium Tamil Nadu Experiences",
-                description: "Heritage temple tours and luxury coastal resorts."
+                badge: "TROPICAL PARADISE",
+                title: "Premium Andaman Experiences",
+                description: "Private cruises, scuba & luxury island stays."
             }
         },
-        tourIds: [], // No tours yet
-        featuredExperiences: []
-    }
+        tourIds: [112],
+        featuredExperiences: [
+            {
+                id: 1,
+                packageId: 112,
+                title: "Andaman Highlights",
+                description: "Cellular Jail, Radhanagar Beach & island water sports.",
+                image: getTourImages('india', 112).galleryImages?.[0] || getTourImages('india', 112).image,
+                buttonText: "View Details"
+            }
+        ]
+    },
 };

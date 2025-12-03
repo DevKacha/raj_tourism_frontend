@@ -716,7 +716,624 @@ export const tours = [
                 meals: ["Breakfast"]
             }
         ]
+    },
+    {
+        id: 111,
+        title: "Char Dham Yatra",
+        duration: "12D/11N",
+        ...getTourImages('india', 111),
+        location: "Haridwar, Barkot, Yamunotri, Uttarkashi, Gangotri, Kedarnath, Badrinath, Rishikesh",
+        price: "On Request",
+        rating: "4.9",
+        reviews: "210",
+        itinerary: [
+            {
+                day: 1,
+                title: "Delhi - Haridwar",
+                description: "Arrive at Delhi by 9 AM. After breakfast depart for Haridwar (225 km / 5 hrs). Check-in at hotel and visit Har Ki Pauri for Ganga Aarti in the evening.",
+                highlights: ["Har Ki Pauri", "Ganga Aarti"],
+                meals: ["Lunch", "Dinner"]
+            },
+            {
+                day: 2,
+                title: "Haridwar - Barkot",
+                description: "After breakfast complete RTO process and depart for Barkot (4000 ft / 160 km / 6 hrs). Check-in at hotel and relax.",
+                highlights: ["Scenic Drive to Barkot"],
+                meals: ["Breakfast", "Lunch", "Dinner"]
+            },
+            {
+                day: 3,
+                title: "Barkot - Yamunotri - Barkot",
+                description: "After breakfast drive to Jankichatti (8600 ft / 45 km / 2 hrs). Trek or hire pony/dolly to Yamunotri (10700 ft). After darshan return to Jankichatti, packed lunch, and drive back to Barkot.",
+                highlights: ["Yamunotri Darshan", "Yamuna Temple", "Trek Experience"],
+                meals: ["Breakfast", "Lunch", "Dinner"]
+            },
+            {
+                day: 4,
+                title: "Barkot - Uttarkashi",
+                description: "Drive to Uttarkashi (3800 ft / 80 km / 3 hrs). Check-in and after lunch visit Kashi Vishwanath Temple.",
+                highlights: ["Kashi Vishwanath Temple", "Uttarkashi Town"],
+                meals: ["Breakfast", "Lunch", "Dinner"]
+            },
+            {
+                day: 5,
+                title: "Uttarkashi - Gangotri - Uttarkashi",
+                description: "After breakfast leave for Gangotri (11200 ft / 140 km / 6 hrs). Darshan of River Ganga. Lunch enroute. Return to Uttarkashi by evening.",
+                highlights: ["Gangotri Temple", "Bhagirathi River", "Scenic Mountain Drive"],
+                meals: ["Breakfast", "Lunch", "Dinner"]
+            },
+            {
+                day: 6,
+                title: "Uttarkashi - Phata",
+                description: "After breakfast depart for Phata (4400 ft / 230 km / 10 hrs). Lunch enroute. Check-in upon arrival.",
+                highlights: ["Scenic Himalayan Route"],
+                meals: ["Breakfast", "Lunch", "Dinner"]
+            },
+            {
+                day: 7,
+                title: "Phata - Sonprayag - Kedarnath",
+                description: "Drive to Sonprayag (30 km / 2 hrs). Begin Kedarnath journey (11800 ft) by walk, pony, dolly, or helicopter (self expense). Check-in at guest house and visit Kedarnath Temple.",
+                highlights: ["Kedarnath Temple", "Mountain Trek", "Helicopter Option"],
+                meals: ["Breakfast", "Packed Lunch", "Dinner"]
+            },
+            {
+                day: 8,
+                title: "Kedarnath - Sonprayag - Phata",
+                description: "After breakfast return to Sonprayag and transfer to Phata. Check-in and relax.",
+                highlights: ["Return Trek", "Rest at Phata"],
+                meals: ["Breakfast", "Lunch", "Dinner"]
+            },
+            {
+                day: 9,
+                title: "Phata - Badrinath",
+                description: "Depart for Badrinath (10200 ft / 185 km / 9 hrs). Lunch enroute. Evening visit to Badrinath Temple.",
+                highlights: ["Badrinath Temple", "Alaknanda River"],
+                meals: ["Breakfast", "Lunch", "Dinner"]
+            },
+            {
+                day: 10,
+                title: "Badrinath - Rudraprayag",
+                description: "After breakfast depart for Rudraprayag (160 km / 6 hrs). Lunch enroute and check-in at hotel.",
+                highlights: ["Confluence Views", "Holy Town of Rudraprayag"],
+                meals: ["Breakfast", "Lunch", "Dinner"]
+            },
+            {
+                day: 11,
+                title: "Rudraprayag - Rishikesh - Haridwar",
+                description: "Drive to Rishikesh (135 km / 4 hrs). Visit major attractions. After lunch proceed to Haridwar (25 km / 1 hr) and check-in.",
+                highlights: ["Rishikesh Sightseeing", "Lakshman Jhula", "Ganga Views"],
+                meals: ["Breakfast", "Lunch", "Dinner"]
+            },
+            {
+                day: 12,
+                title: "Haridwar - Delhi Departure",
+                description: "After breakfast depart for Delhi (250 km / 6 hrs). Lunch enroute. Drop at Delhi by 5 PM.",
+                highlights: ["Scenic Drive"],
+                meals: ["Breakfast", "Lunch"]
+            }
+        ]
+    },
+    {
+        id: 112,
+        title: "Andaman & Nicobar Islands",
+        duration: "6D/5N",
+        ...getTourImages('india', 112),
+        location: "Port Blair, Havelock (Swaraj Dweep), Neil Island",
+        price: "On Request",
+        rating: "4.8",
+        reviews: "128",
+        itinerary: [
+            {
+                day: 1,
+                title: "Arrival — Port Blair",
+                description: "Arrival at Port Blair. Airport pick-up, hotel check-in and rest. Afternoon visit to Cellular Jail. In the evening attend the Light & Sound Show (subject to availability), then return to hotel.",
+                highlights: ["Cellular Jail", "Light & Sound Show (subject to availability)"],
+                meals: ["Dinner"]
+            },
+            {
+                day: 2,
+                title: "Ross Island & North Bay",
+                description: "Morning boat excursion to Ross Island (Netaji Subhash Chandra Bose Island) to explore old British ruins and scenic sea views. Continue to North Bay for optional glass-bottom boat ride, snorkelling or other water-sports. Return to Port Blair for overnight.",
+                highlights: ["Ross Island ruins", "North Bay snorkelling & glass-bottom boat"],
+                meals: ["Breakfast", "Lunch", "Dinner"]
+            },
+            {
+                day: 3,
+                title: "Port Blair - Havelock (Swaraj Dweep)",
+                description: "Early breakfast and transfer to jetty for ferry to Havelock (approx. 1.5 hrs depending on ticket). Check-in at Havelock resort and visit Radhanagar Beach (Beach No.7) for swimming and sunset. Overnight at Havelock.",
+                highlights: ["Radhanagar Beach (Beach No.7)", "Ferry ride to Havelock"],
+                meals: ["Breakfast", "Dinner"]
+            },
+            {
+                day: 4,
+                title: "Havelock — Water Activities",
+                description: "Boat trip to Elephant Beach for coral viewing, snorkelling and optional paid water-sports (sea walk, scuba etc.). Return to resort; evening at leisure.",
+                highlights: ["Elephant Beach snorkelling", "Coral reef sightseeing"],
+                meals: ["Breakfast", "Lunch", "Dinner"]
+            },
+            {
+                day: 5,
+                title: "Havelock - Neil Island — Sightseeing",
+                description: "Transfer by ferry to Neil Island. Explore Bharatpur Beach, Laxmanpur Beach and other island attractions. Leisure time on beaches and local sightseeing.",
+                highlights: ["Bharatpur Beach", "Laxmanpur Beach", "Island sightseeing"],
+                meals: ["Breakfast", "Lunch", "Dinner"]
+            },
+            {
+                day: 6,
+                title: "Neil - Port Blair — Departure",
+                description: "Morning ferry from Neil to Port Blair (if staying on Neil). Last-minute shopping or quick local visit (Marina Park) in Port Blair before airport drop as per flight schedule.",
+                highlights: ["Local shopping", "Marina Park (optional)"],
+                meals: ["Breakfast"]
+            }
+        ]
+    },
+
+    {
+        id: 113,
+        title: "Darjeeling — Lachung — Pelling — Mirik — Gangtok Circuit",
+        duration: "9D/8N",
+        ...getTourImages('india', 113),
+        location: "Darjeeling, Pelling, Gangtok, Lachung, Mirik",
+        price: "On Request",
+        rating: "4.8",
+        reviews: "174",
+        itinerary: [
+            {
+                day: 1,
+                title: "Arrival — Darjeeling",
+                description: "Arrive at NJP/Bagdogra and drive ~3–4 hrs to Darjeeling. Check-in and evening stroll on Mall Road.",
+                highlights: ["Mall Road", "Local markets"],
+                meals: ["Dinner"]
+            },
+            {
+                day: 2,
+                title: "Darjeeling Sightseeing",
+                description: "Early visit to Tiger Hill for sunrise, Batasia Loop and Ghoom Monastery. After breakfast visit Padmaja Naidu Himalayan Zoological Park, Himalayan Mountaineering Institute, Tibetan Centre, Japanese Temple and a tea garden.",
+                highlights: ["Tiger Hill sunrise", "Batasia Loop", "Tea garden visit"],
+                meals: ["Breakfast", "Lunch", "Dinner"]
+            },
+            {
+                day: 3,
+                title: "Darjeeling - Pelling",
+                description: "Drive to Pelling (approx. 67 km / 4 hrs) via scenic routes. En route view Deolo Hill; visit Pemayangtse Monastery and enjoy evening local viewpoints. Overnight Pelling.",
+                highlights: ["Pemayangtse Monastery", "Pelling views"],
+                meals: ["Breakfast", "Dinner"]
+            },
+            {
+                day: 4,
+                title: "Pelling — Local Excursions",
+                description: "Full day Pelling: Rimbi Waterfalls, Khecheopalri Lake, Rabdentse Ruins, Khangchendzonga Falls and Darap Village. Overnight Pelling.",
+                highlights: ["Khecheopalri Lake", "Rabdentse Ruins", "Rimbi Waterfalls"],
+                meals: ["Breakfast", "Lunch", "Dinner"]
+            },
+            {
+                day: 5,
+                title: "Pelling - Gangtok",
+                description: "Drive to Gangtok (approx. 150 km / 5 hrs). Afternoon at leisure or light stroll on MG Marg. Overnight Gangtok.",
+                highlights: ["MG Marg", "Scenic highway drive"],
+                meals: ["Breakfast", "Dinner"]
+            },
+            {
+                day: 6,
+                title: "Gangtok — Local Sightseeing",
+                description: "Visit Tashi Viewpoint, Ganesh Tok, Hanuman Tok, Ranka Monastery, Banjakhri Falls, Do Drul Chorten, Tibetology Institute and Flower Show (seasonal). Overnight Gangtok.",
+                highlights: ["Tashi Viewpoint", "Do Drul Chorten", "Tibetology Institute"],
+                meals: ["Breakfast", "Lunch", "Dinner"]
+            },
+            {
+                day: 7,
+                title: "Gangtok - Lachung",
+                description: "Drive to Lachung (approx. 125 km / 5 hrs). En route visit Singhik Viewpoint, Naga Falls and Bheema Falls. Check-in and overnight at Lachung.",
+                highlights: ["Singhik Viewpoint", "Naga Falls", "Scenic drive"],
+                meals: ["Breakfast", "Dinner"]
+            },
+            {
+                day: 8,
+                title: "Yumthang Valley (Lachung) - Return to Gangtok",
+                description: "Early excursion to Yumthang Valley (Valley of Flowers) and hot springs. Optional visit to Zero Point (subject to weather/permits). Return to Gangtok (~5 hrs) and overnight.",
+                highlights: ["Yumthang Valley", "Hot springs", "Zero Point (optional)"],
+                meals: ["Breakfast", "Packed Lunch", "Dinner"]
+            },
+            {
+                day: 9,
+                title: "Gangtok - Mirik - Departure",
+                description: "Morning visit to Tsomgo Lake & Baba Mandir (permit-dependent). Drive to Mirik (~2 hrs) for boating on Sumendu Lake, tea garden visit and Tingling Viewpoint. Proceed to NJP/Bagdogra (2–3 hrs) for onward journey.",
+                highlights: ["Tsomgo Lake (permit)", "Sumendu Lake boating", "Mirik tea gardens"],
+                meals: ["Breakfast"]
+            }
+        ]
+    },
+    {
+        id: 114,
+        title: "Lakshadweep — Agatti, Kavaratti & Bangaram",
+        duration: "5D/4N",
+        ...getTourImages('india', 114),
+        location: "Agatti, Kavaratti, Bangaram, Kadmat/Thinnakara",
+        price: "On Request",
+        rating: "4.7",
+        reviews: "92",
+        itinerary: [
+            {
+                day: 1,
+                title: "Arrival — Agatti - Kavaratti",
+                description: "Fly Kochi - Agatti. Speedboat transfer (1–3 hrs) to Kavaratti. Resort check-in and beach relaxation. Afternoon snorkeling at coral reefs and glass-bottom boat ride. Evening dolphin spotting. Overnight Kavaratti.",
+                highlights: ["Kavaratti snorkeling", "Glass-bottom boat", "Dolphin spotting"],
+                meals: ["Dinner"]
+            },
+            {
+                day: 2,
+                title: "Kavaratti - Agatti Activities",
+                description: "Morning sightseeing of Kavaratti Beach and Chicken Neck Lagoon with options for kayaking or scuba (extra cost). Speedboat transfer to Agatti with optional deep-sea fishing or beach sports. Overnight Agatti resort.",
+                highlights: ["Chicken Neck Lagoon", "Kayaking/Scuba (optional)"],
+                meals: ["Breakfast", "Lunch", "Dinner"]
+            },
+            {
+                day: 3,
+                title: "Agatti - Bangaram & Thinnakara Day Trip",
+                description: "Speedboat day trip to uninhabited Bangaram for lagoon snorkeling and scuba. Visit Thinnakara sandbank for picnic and relaxation. Return to Agatti in the evening.",
+                highlights: ["Bangaram lagoon snorkeling", "Thinnakara sandbank picnic"],
+                meals: ["Breakfast", "Lunch", "Dinner"]
+            },
+            {
+                day: 4,
+                title: "Agatti - Kadmat/Kalpitti",
+                description: "Speedboat to Kadmat or Kalpitti (approx. 3 hrs). Lagoon kayaking, birdwatching and coral viewing. Leisure time or optional sea-walk activities. Return to Agatti for overnight.",
+                highlights: ["Kadmat lagoon activities", "Birdwatching & coral viewing"],
+                meals: ["Breakfast", "Lunch", "Dinner"]
+            },
+            {
+                day: 5,
+                title: "Departure from Agatti",
+                description: "Morning at leisure for beach/snorkel and relaxation; transfer to airport for Kochi flight as per schedule.",
+                highlights: ["Beach time", "Last-minute snorkeling"],
+                meals: ["Breakfast"]
+            }
+        ]
+    },
+
+    {
+        id: 115,
+        title: "Leh — Ladakh Explorer",
+        duration: "7D/6N",
+        ...getTourImages('india', 115),
+        location: "Leh, Nubra Valley, Pangong Lake",
+        price: "On Request",
+        rating: "4.9",
+        reviews: "304",
+        itinerary: [
+            {
+                day: 1,
+                title: "Arrival & Acclimatization — Leh",
+                description: "Arrive at Leh airport (~3,500 m). Transfer to hotel and rest to acclimatize. Avoid strenuous activity; short, easy walks nearby recommended.",
+                highlights: ["Leh acclimatization", "Light local walks"],
+                meals: ["Dinner"]
+            },
+            {
+                day: 2,
+                title: "Leh — Local Sightseeing",
+                description: "Sightseeing in Leh: Leh Palace, Shanti Stupa, Namgyal Tsemo Gompa and Main Bazaar. Optional visits: Hall of Fame Museum and Gurudwara Pathar Sahib.",
+                highlights: ["Leh Palace", "Shanti Stupa", "Main Bazaar"],
+                meals: ["Breakfast", "Dinner"]
+            },
+            {
+                day: 3,
+                title: "Sham Valley Tour",
+                description: "Explore Sham Valley: Alchi Monastery, Basgo Castle, Likir Monastery and surrounding traditional villages. Return to Leh for overnight.",
+                highlights: ["Alchi Monastery", "Likir Monastery", "Basgo Castle"],
+                meals: ["Breakfast", "Lunch", "Dinner"]
+            },
+            {
+                day: 4,
+                title: "Leh - Nubra Valley via Khardung La",
+                description: "Drive via Khardung La Pass (5,359 m) to Nubra Valley. Visit Diskit Monastery and Hunder Sand Dunes; enjoy double-humped camel ride. Overnight in Nubra.",
+                highlights: ["Khardung La Pass", "Diskit Monastery", "Hunder sand dunes & camels"],
+                meals: ["Breakfast", "Lunch", "Dinner"]
+            },
+            {
+                day: 5,
+                title: "Nubra - Pangong Lake",
+                description: "Drive from Nubra to Pangong Lake across scenic mountain routes. Arrive and relax by Pangong Lake (evening views and photos). Overnight near Pangong.",
+                highlights: ["Pangong Lake sunset", "Stunning high-altitude lake"],
+                meals: ["Breakfast", "Packed Lunch", "Dinner"]
+            },
+            {
+                day: 6,
+                title: "Pangong - Leh via Chang La",
+                description: "Morning at the lake, then drive back to Leh via Chang La Pass. Evening free for shopping or local exploration in Leh market.",
+                highlights: ["Chang La Pass", "Leh market time"],
+                meals: ["Breakfast", "Dinner"]
+            },
+            {
+                day: 7,
+                title: "Departure from Leh",
+                description: "Transfer to Leh airport for onward journey.",
+                highlights: ["Airport transfer"],
+                meals: ["Breakfast"]
+            }
+        ]
+    },
+
+    {
+        id: 116,
+        title: "Assam & Shillong — Wildlife, Culture & Hills",
+        duration: "7D/6N",
+        ...getTourImages('india', 116),
+        location: "Guwahati, Kaziranga, Majuli, Sivasagar, Shillong",
+        price: "On Request",
+        rating: "4.7",
+        reviews: "156",
+        itinerary: [
+            {
+                day: 1,
+                title: "Guwahati — Arrival & Local Sights",
+                description: "Arrive in Guwahati. Visit Kamakhya Temple and take a ferry to Umananda Island (subject to timings). Overnight Guwahati.",
+                highlights: ["Kamakhya Temple", "Umananda Island ferry"],
+                meals: ["Dinner"]
+            },
+            {
+                day: 2,
+                title: "Guwahati - Kaziranga",
+                description: "Drive via tea gardens to Kaziranga (approx. 4–5 hrs). Evening jeep safari in the Central Range for sightings of one-horned rhinoceros and other wildlife. Overnight Kaziranga.",
+                highlights: ["Kaziranga jeep safari", "Tea garden views en route"],
+                meals: ["Breakfast", "Dinner"]
+            },
+            {
+                day: 3,
+                title: "Kaziranga — Safaris",
+                description: "Morning elephant safari followed by afternoon jeep safari (Eastern/Western ranges). Visit a local tea estate if time permits. Overnight Kaziranga.",
+                highlights: ["Elephant safari", "Jeep safari", "Tea estate visit"],
+                meals: ["Breakfast", "Lunch", "Dinner"]
+            },
+            {
+                day: 4,
+                title: "Kaziranga - Majuli",
+                description: "Drive and ferry to Majuli (approx. 3–4 hrs + ferry). Explore Auniati Satra, Mishing villages and experience satriya dance & local culture. Overnight Majuli.",
+                highlights: ["Auniati Satra", "Mishing village cultural visit"],
+                meals: ["Breakfast", "Lunch", "Dinner"]
+            },
+            {
+                day: 5,
+                title: "Majuli - Sivasagar",
+                description: "Morning cultural walks in Majuli. Drive to Sivasagar (approx. 2 hrs). Visit Rang Ghar, Talatal Ghar and Shiva Dol. Overnight Sivasagar.",
+                highlights: ["Rang Ghar", "Talatal Ghar", "Shivadol"],
+                meals: ["Breakfast", "Dinner"]
+            },
+            {
+                day: 6,
+                title: "Sivasagar - Shillong (via scenic route)",
+                description: "After morning exploration, drive to Shillong (approx. 6–7 hrs) via Umiam Lake. Evening free at Police Bazar/MG Road. Overnight Shillong.",
+                highlights: ["Umiam Lake", "Police Bazar shopping"],
+                meals: ["Breakfast", "Dinner"]
+            },
+            {
+                day: 7,
+                title: "Shillong Sightseeing & Departure",
+                description: "Sightseeing at Ward's Lake, Elephant Falls, Shillong Peak and Don Bosco Museum. Return / drive (~3 hrs) to Guwahati for onward flight/rail connections as per schedule.",
+                highlights: ["Elephant Falls", "Shillong Peak", "Don Bosco Museum"],
+                meals: ["Breakfast"]
+            }
+        ]
+    },
+    {
+        id: 117,
+        title: "Karnataka — Bangalore • Mysore • Ooty • Coorg",
+        duration: "9D/8N",
+        ...getTourImages('india', 117),
+        location: "Bangalore, Mysore, Ooty, Coonoor, Coimbatore, Coorg (Kodagu)",
+        price: "On Request",
+        rating: "4.7",
+        reviews: "128",
+        itinerary: [
+            {
+                day: 1,
+                title: "Bangalore — Arrival & Local Sights",
+                description: "Arrive Bangalore. Visit Lalbagh Botanical Garden, Cubbon Park and Bangalore Palace. Evening at leisure; overnight Bangalore.",
+                highlights: ["Lalbagh Garden", "Cubbon Park", "Bangalore Palace"],
+                meals: ["Dinner"]
+            },
+            {
+                day: 2,
+                title: "Bangalore - Mysore",
+                description: "Drive to Mysore (~3 hrs) via Srirangapatna. Visit Mysore Palace, Chamundi Hills and evening Brindavan Gardens light & musical fountain show. Overnight Mysore.",
+                highlights: ["Mysore Palace", "Chamundi Hills", "Brindavan Gardens light show"],
+                meals: ["Breakfast", "Dinner"]
+            },
+            {
+                day: 3,
+                title: "Mysore - Ooty (via Bandipur)",
+                description: "Drive to Ooty (6–7 hrs) via Bandipur Tiger Reserve and scenic Nilgiri ghats (approx. 36 hairpin bends). Arrive Ooty and check-in. Overnight Ooty.",
+                highlights: ["Bandipur scenic drive", "Nilgiri ghats hairpin bends"],
+                meals: ["Breakfast", "Dinner"]
+            },
+            {
+                day: 4,
+                title: "Ooty — Local Sightseeing",
+                description: "Explore Ooty: Government Botanical Garden, Ooty Lake (boating), Doddabetta Peak, Rose Garden and Thread Garden. Evening at leisure. Overnight Ooty.",
+                highlights: ["Botanical Gardens", "Ooty Lake boating", "Doddabetta Peak"],
+                meals: ["Breakfast", "Dinner"]
+            },
+            {
+                day: 5,
+                title: "Ooty - Coonoor (Day Trip) - Ooty",
+                description: "Day trip to Coonoor: visit Sim's Park, Lamb's Rock, Dolphin's Nose and tea estates. Return to Ooty in the evening. Overnight Ooty.",
+                highlights: ["Sim's Park", "Dolphin's Nose", "Coonoor tea estates"],
+                meals: ["Breakfast", "Dinner"]
+            },
+            {
+                day: 6,
+                title: "Ooty - Coimbatore",
+                description: "Drive to Coimbatore (~3 hrs). Visit Marudhamalai Temple, Perur Pateeswarar Temple and optional Isha Yoga Center / Dhyanalinga. Overnight Coimbatore.",
+                highlights: ["Marudhamalai Temple", "Perur Pateeswarar Temple", "Isha Yoga Center (optional)"],
+                meals: ["Breakfast", "Dinner"]
+            },
+            {
+                day: 7,
+                title: "Coimbatore - Coorg (Kodagu)",
+                description: "Morning market/short local visit. Drive to Coorg (~4 hrs) through Western Ghats. Visit Abbey Falls and Raja's Seat viewpoint. Overnight Coorg.",
+                highlights: ["Abbey Falls", "Raja's Seat", "Scenic Western Ghats drive"],
+                meals: ["Breakfast", "Dinner"]
+            },
+            {
+                day: 8,
+                title: "Coorg — Exploration",
+                description: "Explore Coorg: Dubare Elephant Camp (river activities), Namdroling (Golden Temple) at Bylakuppe, coffee plantation walk/trek and Talacauvery (birthplace of River Cauvery). Overnight Coorg.",
+                highlights: ["Dubare Elephant Camp", "Namdroling Golden Temple", "Coffee plantation trek"],
+                meals: ["Breakfast", "Dinner"]
+            },
+            {
+                day: 9,
+                title: "Coorg - Bangalore — Departure",
+                description: "Morning visit to Nisargadhama / local bamboo forest. Drive back to Bangalore (5–6 hrs) for airport drop / onward journey.",
+                highlights: ["Nisargadhama bamboo island", "Return transfer to Bangalore"],
+                meals: ["Breakfast"]
+            }
+        ]
+    },
+
+    {
+        id: 118,
+        title: "Tamil Nadu — Chennai • Mahabalipuram • Pondicherry • Madurai • Rameswaram • Kanyakumari",
+        duration: "7D/6N",
+        ...getTourImages('india', 118),
+        location: "Chennai, Mahabalipuram, Pondicherry, Madurai, Rameswaram, Kanyakumari",
+        price: "On Request",
+        rating: "4.6",
+        reviews: "162",
+        itinerary: [
+            {
+                day: 1,
+                title: "Arrive Chennai — Local Sights",
+                description: "Arrive Chennai. Visits include Kapaleeshwarar Temple, Fort St. George and Marina Beach promenade. Overnight Chennai.",
+                highlights: ["Kapaleeshwarar Temple", "Fort St. George", "Marina Beach"],
+                meals: ["Dinner"]
+            },
+            {
+                day: 2,
+                title: "Chennai - Mahabalipuram",
+                description: "Drive to Mahabalipuram (~60 km). Explore Shore Temple (UNESCO), Pancha Rathas, Arjuna's Penance rock carvings and cave temples. Evening beach walk; overnight Mahabalipuram.",
+                highlights: ["Shore Temple", "Pancha Rathas", "Arjuna's Penance"],
+                meals: ["Breakfast", "Dinner"]
+            },
+            {
+                day: 3,
+                title: "Mahabalipuram - Pondicherry",
+                description: "Drive to Pondicherry (~100 km). Explore the French Quarter, Aurobindo Ashram and Promenade Beach. Evening café stroll and shopping; overnight Pondicherry.",
+                highlights: ["French Colony", "Aurobindo Ashram", "Promenade Beach"],
+                meals: ["Breakfast", "Dinner"]
+            },
+            {
+                day: 4,
+                title: "Pondicherry - Madurai",
+                description: "Early drive to Madurai (~330 km / 6–7 hrs). Visit Meenakshi Amman Temple, Thirumalai Nayak Palace and Gandhi Museum. Overnight Madurai.",
+                highlights: ["Meenakshi Amman Temple", "Thirumalai Nayak Palace", "Gandhi Museum"],
+                meals: ["Breakfast", "Dinner"]
+            },
+            {
+                day: 5,
+                title: "Madurai - Rameswaram",
+                description: "Drive to Rameswaram (~170 km). Visit Ramanathaswamy Temple, Agnitheertham sacred shores, Pamban Bridge and explore Dhanushkodi (if accessible). Overnight Rameswaram.",
+                highlights: ["Ramanathaswamy Temple", "Pamban Bridge", "Agnitheertham"],
+                meals: ["Breakfast", "Dinner"]
+            },
+            {
+                day: 6,
+                title: "Rameswaram - Kanyakumari",
+                description: "Drive to Kanyakumari (~300 km). Visit Vivekananda Rock Memorial, Thiruvalluvar Statue and Gandhi Memorial. Watch sunset at India’s southern tip. Overnight Kanyakumari.",
+                highlights: ["Vivekananda Rock Memorial", "Thiruvalluvar Statue", "Sunset at Kanyakumari"],
+                meals: ["Breakfast", "Dinner"]
+            },
+            {
+                day: 7,
+                title: "Kanyakumari - Chennai / Departure",
+                description: "Return drive to Chennai or proceed to onward connection as per schedule. Option to extend stay at Kanyakumari or catch flights from Trivandrum/Chennai.",
+                highlights: ["Departure / onward connections"],
+                meals: ["Breakfast"]
+            }
+        ]
+    },
+    {
+        id: 119,
+        title: "Nainital • Ranikhet • Almora • Corbett • Kasol • Mussoorie • Dehradun",
+        duration: "10D/9N",
+        ...getTourImages('india', 119),
+        location: "Nainital, Ranikhet, Almora, Jim Corbett, Kasol, Mussoorie, Dehradun",
+        price: "On Request",
+        rating: "4.8",
+        reviews: "144",
+        itinerary: [
+            {
+                day: 1,
+                title: "Delhi - Nainital",
+                description: "Drive Delhi to Nainital (300 km / 7 hrs). Enjoy boating at Naini Lake, visit Naina Devi Temple and evening Mall Road stroll. Overnight Nainital.",
+                highlights: ["Naini Lake Boating", "Naina Devi Temple", "Mall Road"],
+                meals: ["Dinner"]
+            },
+            {
+                day: 2,
+                title: "Nainital Lake Tour",
+                description: "Visit Sattal, Bhimtal, Naukuchiatal. Explore Snow View Point and Tiffin Top. Overnight Nainital.",
+                highlights: ["Bhimtal", "Sattal", "Naukuchiatal", "Snow View", "Tiffin Top"],
+                meals: ["Breakfast", "Dinner"]
+            },
+            {
+                day: 3,
+                title: "Nainital - Ranikhet",
+                description: "Drive to Ranikhet (90 km / 3 hrs). Visit Chaubatia Gardens, Jhula Devi Temple, Golf Course and Bhalu Dam. Overnight Ranikhet.",
+                highlights: ["Chaubatia Gardens", "Jhula Devi Temple", "Ranikhet Golf Course", "Bhalu Dam"],
+                meals: ["Breakfast", "Dinner"]
+            },
+            {
+                day: 4,
+                title: "Ranikhet - Almora",
+                description: "Drive to Almora (50 km / 2 hrs). Visit Kasar Devi Temple, Nanda Devi Temple, Bright End Corner views, local markets. Overnight Almora.",
+                highlights: ["Kasar Devi Temple", "Nanda Devi Temple", "Bright End Corner", "Almora Markets"],
+                meals: ["Breakfast", "Dinner"]
+            },
+            {
+                day: 5,
+                title: "Almora - Jim Corbett",
+                description: "Drive Almora to Corbett (170 km / 6 hrs). En route visit Garjiya Temple. Evening visit Corbett Museum or waterfall. Overnight Corbett.",
+                highlights: ["Garjiya Temple", "Corbett Museum", "Corbett Waterfall"],
+                meals: ["Breakfast", "Dinner"]
+            },
+            {
+                day: 6,
+                title: "Jim Corbett — Safari Day",
+                description: "Early morning jeep safari for tigers, elephants and wildlife at Corbett National Park. Relax by Kosi River. Overnight Corbett.",
+                highlights: ["Jeep Safari", "Tiger Spotting", "Kosi River"],
+                meals: ["Breakfast", "Dinner"]
+            },
+            {
+                day: 7,
+                title: "Corbett - Kasol",
+                description: "Long scenic drive to Kasol (450 km / 10 hrs). Arrive Parvati Valley; enjoy riverside walk and chill vibe. Overnight Kasol.",
+                highlights: ["Parvati Valley", "Riverside Walk", "Kasol Market"],
+                meals: ["Breakfast", "Dinner"]
+            },
+            {
+                day: 8,
+                title: "Kasol - Mussoorie",
+                description: "Drive Kasol to Mussoorie (350 km / 9 hrs via Chandigarh). Visit Kempty Falls, Mall Road and Gun Hill (cable car). Overnight Mussoorie.",
+                highlights: ["Kempty Falls", "Mall Road", "Gun Hill Cable Car"],
+                meals: ["Breakfast", "Dinner"]
+            },
+            {
+                day: 9,
+                title: "Mussoorie - Dehradun",
+                description: "Drive to Dehradun (35 km / 1 hr). Visit Robber’s Cave, Sahastradhara, Paltan Bazaar; optional Tapkeshwar Temple. Overnight Dehradun.",
+                highlights: ["Robber’s Cave", "Sahastradhara", "Paltan Bazaar", "Tapkeshwar Temple"],
+                meals: ["Breakfast", "Dinner"]
+            },
+            {
+                day: 10,
+                title: "Dehradun - Delhi",
+                description: "Drive to Delhi (250 km / 6 hrs). Optional visit to Forest Research Institute if time permits. Drop at Delhi.",
+                highlights: ["Forest Research Institute", "Return Drive"],
+                meals: ["Breakfast"]
+            }
+        ]
     }
+
 ];
 
 // India Page - Premium Featured Experiences

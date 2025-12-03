@@ -55,12 +55,12 @@ const ExploreIndia = () => {
     },
     {
       id: 6,
-      name: "Tamil Nadu",
-      image: logo,
-      description: "Ancient temples and rich heritage",
-      rating: 4.6,
-      tours: 0,
-      link: "/india/tamil-nadu",
+      name: "Andaman & Nicobar",
+      image: getTourImages("india", 112).image,
+      description: "Pristine beaches, blue waters and tropical adventures",
+      rating: 4.8,
+      tours: 1,
+      link: "/india/andaman",
     },
     {
       id: 7,
@@ -68,7 +68,7 @@ const ExploreIndia = () => {
       image: getTourImages("india", 104).image,
       description: "Spiritual journey to the Himalayas",
       rating: 4.7,
-      tours: 2,
+      tours: 4,
       link: "/india/uttarakhand",
     },
     {
