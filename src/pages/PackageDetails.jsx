@@ -1,12 +1,23 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useLocation, useParams, useNavigate } from "react-router-dom";
 import Footer from "../components/Footer";
-import { tours as gujaratTours, inclusions as gujaratInclusions, exclusions as gujaratExclusions } from "../constants/gujaratData";
-import { tours as indiaTours, inclusions as indiaInclusions, exclusions as indiaExclusions } from "../constants/indiaData";
-import { tours as internationalTours, inclusions as internationalInclusions, exclusions as internationalExclusions } from "../constants/internationalData";
-import jsPDF from 'jspdf';
-import autoTable from 'jspdf-autotable';
-
+import {
+  tours as gujaratTours,
+  inclusions as gujaratInclusions,
+  exclusions as gujaratExclusions,
+} from "../constants/gujaratData";
+import {
+  tours as indiaTours,
+  inclusions as indiaInclusions,
+  exclusions as indiaExclusions,
+} from "../constants/indiaData";
+import {
+  tours as internationalTours,
+  inclusions as internationalInclusions,
+  exclusions as internationalExclusions,
+} from "../constants/internationalData";
+import jsPDF from "jspdf";
+import autoTable from "jspdf-autotable";
 
 // ==================== ICONS ====================
 const ChevronLeft = ({ className }) => (
@@ -250,16 +261,27 @@ const PackageDetails = () => {
   const isInternational = pkg.id >= 201;
 
   // Get appropriate inclusions and exclusions based on package type
-  let inclusions = isInternational ? [...internationalInclusions] : (pkg.id >= 101 ? [...indiaInclusions] : [...gujaratInclusions]);
-  const exclusions = isInternational ? internationalExclusions : (pkg.id >= 101 ? indiaExclusions : gujaratExclusions);
+  let inclusions = isInternational
+    ? [...internationalInclusions]
+    : pkg.id >= 101
+    ? [...indiaInclusions]
+    : [...gujaratInclusions];
+  const exclusions = isInternational
+    ? internationalExclusions
+    : pkg.id >= 101
+    ? indiaExclusions
+    : gujaratExclusions;
 
   // Check if Cruise should be included for international packages
   if (isInternational) {
-    const hasCruise = pkg.title.toLowerCase().includes('cruise') ||
-      (pkg.itinerary && pkg.itinerary.some(day =>
-        day.title.toLowerCase().includes('cruise') ||
-        day.description.toLowerCase().includes('cruise')
-      ));
+    const hasCruise =
+      pkg.title.toLowerCase().includes("cruise") ||
+      (pkg.itinerary &&
+        pkg.itinerary.some(
+          (day) =>
+            day.title.toLowerCase().includes("cruise") ||
+            day.description.toLowerCase().includes("cruise")
+        ));
 
     if (hasCruise && !inclusions.includes("Cruise")) {
       inclusions.push("Cruise");
@@ -279,7 +301,8 @@ const PackageDetails = () => {
     {
       day: 1,
       title: "Arrival & Welcome",
-      description: "Arrival at destination, transfer to hotel, and leisure time.",
+      description:
+        "Arrival at destination, transfer to hotel, and leisure time.",
       highlights: ["Arrival", "Transfer", "Leisure"],
       meals: ["Dinner"],
     },
@@ -322,8 +345,8 @@ const PackageDetails = () => {
     if (activeDay !== -1 && cardRefs.current[activeDay]) {
       setTimeout(() => {
         cardRefs.current[activeDay].scrollIntoView({
-          behavior: 'smooth',
-          block: 'nearest',
+          behavior: "smooth",
+          block: "nearest",
         });
       }, 100); // Small delay to allow card expansion animation to start
     }
@@ -373,7 +396,7 @@ const PackageDetails = () => {
     const overviewLines = doc.splitTextToSize(overviewText, 170);
     doc.text(overviewLines, 20, 80);
 
-    let yPos = 80 + (overviewLines.length * 5) + 10;
+    let yPos = 80 + overviewLines.length * 5 + 10;
 
     // Itinerary
     doc.setFontSize(14);
@@ -381,23 +404,23 @@ const PackageDetails = () => {
     doc.text("Itinerary", 20, yPos);
     yPos += 10;
 
-    const itineraryData = itinerary.map(day => [
+    const itineraryData = itinerary.map((day) => [
       `Day ${day.day}`,
       day.title,
       day.description,
-      day.meals.join(", ")
+      day.meals.join(", "),
     ]);
 
     autoTable(doc, {
       startY: yPos,
-      head: [['Day', 'Title', 'Description', 'Meals']],
+      head: [["Day", "Title", "Description", "Meals"]],
       body: itineraryData,
       headStyles: { fillColor: orange, textColor: [255, 255, 255] },
       columnStyles: {
-        0: { cellWidth: 20, fontStyle: 'bold' },
-        1: { cellWidth: 40, fontStyle: 'bold' },
-        2: { cellWidth: 'auto' },
-        3: { cellWidth: 30 }
+        0: { cellWidth: 20, fontStyle: "bold" },
+        1: { cellWidth: 40, fontStyle: "bold" },
+        2: { cellWidth: "auto" },
+        3: { cellWidth: 30 },
       },
       alternateRowStyles: { fillColor: lightGray },
       margin: { top: 20 },
@@ -419,15 +442,12 @@ const PackageDetails = () => {
     const maxRows = Math.max(inclusions.length, exclusions.length);
     const incExcData = [];
     for (let i = 0; i < maxRows; i++) {
-      incExcData.push([
-        inclusions[i] || "",
-        exclusions[i] || ""
-      ]);
+      incExcData.push([inclusions[i] || "", exclusions[i] || ""]);
     }
 
     autoTable(doc, {
       startY: yPos,
-      head: [['Inclusions', 'Exclusions']],
+      head: [["Inclusions", "Exclusions"]],
       body: incExcData,
       headStyles: { fillColor: orange, textColor: [255, 255, 255] },
       alternateRowStyles: { fillColor: lightGray },
@@ -441,10 +461,12 @@ const PackageDetails = () => {
       doc.setFontSize(8);
       doc.setTextColor(...gray);
       doc.text(`Page ${i} of ${pageCount}`, 105, 290, { align: "center" });
-      doc.text(`Generated on ${new Date().toLocaleDateString()}`, 190, 290, { align: "right" });
+      doc.text(`Generated on ${new Date().toLocaleDateString()}`, 190, 290, {
+        align: "right",
+      });
     }
 
-    doc.save(`${pkg.title.replace(/\s+/g, '_')}_Brochure.pdf`);
+    doc.save(`${pkg.title.replace(/\s+/g, "_")}_Brochure.pdf`);
   };
 
   return (
@@ -497,7 +519,7 @@ const PackageDetails = () => {
             className="absolute top-20 right-6 bg-orange-600/90 backdrop-blur-md border border-orange-500/20 text-white px-5 py-2.5 rounded-full flex items-center gap-2 hover:bg-orange-600 hover:scale-105 transition-all duration-300 active:scale-95 shadow-lg"
           >
             <Download className="w-5 h-5" />
-            Download Brochure
+            Brochure
           </button>
 
           {/* Package Info Overlay */}
@@ -533,10 +555,11 @@ const PackageDetails = () => {
                 <button
                   key={idx}
                   onClick={() => setCurrentImageIndex(idx)}
-                  className={`flex-shrink-0 w-24 h-20 rounded-lg overflow-hidden border-2 transition-all duration-300 ${currentImageIndex === idx
-                    ? "border-orange-500 scale-105 shadow-lg"
-                    : "border-transparent opacity-60 hover:opacity-100 hover:scale-105 hover:border-orange-300"
-                    }`}
+                  className={`flex-shrink-0 w-24 h-20 rounded-lg overflow-hidden border-2 transition-all duration-300 ${
+                    currentImageIndex === idx
+                      ? "border-orange-500 scale-105 shadow-lg"
+                      : "border-transparent opacity-60 hover:opacity-100 hover:scale-105 hover:border-orange-300"
+                  }`}
                 >
                   <img
                     src={img}
@@ -569,19 +592,21 @@ const PackageDetails = () => {
                 vibrant local culture.
               </p>
 
-
-
               {/* Quick Info Cards */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 <div className="bg-gradient-to-br from-orange-50 to-orange-100 p-4 rounded-xl text-center transition-all duration-300 md:hover:shadow-lg md:hover:scale-105 md:hover:from-orange-100 md:hover:to-orange-200 active:scale-105 cursor-pointer group">
                   <Calendar className="w-8 h-8 text-orange-600 mx-auto mb-2 transition-transform duration-300 group-hover:scale-110" />
                   <p className="text-xs text-gray-600 mb-1">Days</p>
-                  <p className="font-bold text-gray-900">{pkg.duration.split('/')[0].replace('D', '')} Days</p>
+                  <p className="font-bold text-gray-900">
+                    {pkg.duration.split("/")[0].replace("D", "")} Days
+                  </p>
                 </div>
                 <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-4 rounded-xl text-center transition-all duration-300 md:hover:shadow-lg md:hover:scale-105 md:hover:from-blue-100 md:hover:to-blue-200 active:scale-105 cursor-pointer group">
                   <Moon className="w-8 h-8 text-blue-600 mx-auto mb-2 transition-transform duration-300 group-hover:scale-110" />
                   <p className="text-xs text-gray-600 mb-1">Nights</p>
-                  <p className="font-bold text-gray-900">{pkg.duration.split('/')[1]?.replace('N', '') || 0} Nights</p>
+                  <p className="font-bold text-gray-900">
+                    {pkg.duration.split("/")[1]?.replace("N", "") || 0} Nights
+                  </p>
                 </div>
                 <div className="bg-gradient-to-br from-green-50 to-green-100 p-4 rounded-xl text-center transition-all duration-300 md:hover:shadow-lg md:hover:scale-105 md:hover:from-green-100 md:hover:to-green-200 active:scale-105 cursor-pointer group">
                   <Coffee className="w-8 h-8 text-green-600 mx-auto mb-2 transition-transform duration-300 group-hover:scale-110" />
@@ -607,10 +632,11 @@ const PackageDetails = () => {
                   <div
                     key={index}
                     ref={(el) => (cardRefs.current[index] = el)}
-                    className={`border border-gray-200 rounded-xl overflow-hidden transition-all duration-500 transform origin-top ${activeDay === index
-                      ? 'shadow-2xl border-orange-300 scale-[1.02]'
-                      : 'shadow-sm hover:shadow-lg hover:border-orange-200'
-                      }`}
+                    className={`border border-gray-200 rounded-xl overflow-hidden transition-all duration-500 transform origin-top ${
+                      activeDay === index
+                        ? "shadow-2xl border-orange-300 scale-[1.02]"
+                        : "shadow-sm hover:shadow-lg hover:border-orange-200"
+                    }`}
                   >
                     <button
                       onClick={() =>
@@ -620,26 +646,51 @@ const PackageDetails = () => {
                     >
                       <div className="flex items-center gap-6">
                         {/* Big Day Text */}
-                        <div className={`flex-shrink-0 transition-all duration-500 ${activeDay === index ? 'scale-110 translate-x-2' : 'group-hover:scale-105'
-                          }`}>
-                          <h3 className={`text-2xl sm:text-3xl font-black uppercase tracking-tight ${activeDay === index ? 'text-orange-600' : 'text-gray-300 group-hover:text-orange-300'
-                            }`}>
+                        <div
+                          className={`flex-shrink-0 transition-all duration-500 ${
+                            activeDay === index
+                              ? "scale-110 translate-x-2"
+                              : "group-hover:scale-105"
+                          }`}
+                        >
+                          <h3
+                            className={`text-2xl sm:text-3xl font-black uppercase tracking-tight ${
+                              activeDay === index
+                                ? "text-orange-600"
+                                : "text-gray-300 group-hover:text-orange-300"
+                            }`}
+                          >
                             DAY-{day.day}
                           </h3>
                         </div>
 
                         {/* Title */}
-                        <div className={`border-l-2 pl-6 transition-colors duration-300 ${activeDay === index ? 'border-orange-200' : 'border-gray-100 group-hover:border-orange-100'
-                          }`}>
-                          <h3 className={`font-bold text-lg sm:text-xl transition-colors duration-300 ${activeDay === index ? 'text-gray-900' : 'text-gray-600 group-hover:text-gray-900'
-                            }`}>
+                        <div
+                          className={`border-l-2 pl-6 transition-colors duration-300 ${
+                            activeDay === index
+                              ? "border-orange-200"
+                              : "border-gray-100 group-hover:border-orange-100"
+                          }`}
+                        >
+                          <h3
+                            className={`font-bold text-lg sm:text-xl transition-colors duration-300 ${
+                              activeDay === index
+                                ? "text-gray-900"
+                                : "text-gray-600 group-hover:text-gray-900"
+                            }`}
+                          >
                             {day.title}
                           </h3>
                         </div>
                       </div>
 
-                      <div className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${activeDay === index ? 'bg-orange-100 text-orange-600 rotate-180' : 'bg-gray-50 text-gray-400 group-hover:bg-orange-50 group-hover:text-orange-500'
-                        }`}>
+                      <div
+                        className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${
+                          activeDay === index
+                            ? "bg-orange-100 text-orange-600 rotate-180"
+                            : "bg-gray-50 text-gray-400 group-hover:bg-orange-50 group-hover:text-orange-500"
+                        }`}
+                      >
                         <ChevronDown className="w-5 h-5" />
                       </div>
                     </button>
@@ -853,11 +904,11 @@ const PackageDetails = () => {
               </div>
             </div>
           </div> */}
-        </div >
-      </div >
+        </div>
+      </div>
 
       <Footer />
-    </div >
+    </div>
   );
 };
 

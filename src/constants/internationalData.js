@@ -1034,7 +1034,7 @@ export const featuredExperiences = [
 // International Tours Page - Hero Section Content
 export const heroContent = {
     title: "INTERNATIONAL TOURS",
-    subtitle: "Discover the World Beyond Borders",
+    subtitle: "Discover the World",
     description:
         "Embark on extraordinary journeys across the globe with our carefully curated international tour packages. From tropical paradises to historic European cities, experience the world's finest destinations with comfort and style.",
 };
