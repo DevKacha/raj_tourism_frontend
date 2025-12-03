@@ -60,7 +60,7 @@ export default function Header() {
               aria-label="Raj Tourism Home"
             >
               <div
-                className={`relative w-20 h-10 md:w-12 md:h-12 rounded-lg flex items-center justify-center inset-0 inset-shadow-sm transition-all duration-500 ease-out group-hover:shadow-2xl ${
+                className={`relative w-10 h-10 md:w-12 md:h-12 rounded-lg flex items-center justify-center inset-0 inset-shadow-sm transition-all duration-500 ease-out group-hover:shadow-2xl ${
                   scrolled
                     ? " group-hover:scale-110 group-hover:rotate-3"
                     : " group-hover:scale-125 group-hover:-rotate-6"
@@ -90,7 +90,7 @@ export default function Header() {
                     scrolled ? "text-gray-600" : "text-white/90"
                   }`}
                 >
-                  Explore Gujarat · Explore India · Explore World
+                  Dream Holiday, Think Raj
                 </span>
               </div>
             </Link>

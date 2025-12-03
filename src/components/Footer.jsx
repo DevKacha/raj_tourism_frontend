@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logo from "../assets/raj_tourism/rt-logo.png";
+import logo from "../assets/raj_tourism/rt-logo_final.png";
 
 export default function Footer() {
   return (
@@ -21,7 +21,9 @@ export default function Footer() {
                 <div className="text-xl font-bold text-gray-900">
                   Raj Tourism
                 </div>
-                <div className="text-xs text-gray-500">Discover Goa</div>
+                <div className="text-xs text-gray-500">
+                  Dream Holiday, Think Raj
+                </div>
               </div>
             </div>
 
@@ -230,10 +232,10 @@ export default function Footer() {
                 </svg>
                 <div>
                   <a
-                    href="tel:+919876543210"
+                    href="tel:+919428252181"
                     className="text-sm text-gray-600 hover:text-blue-600 transition-colors block"
                   >
-                    +91 9876543210
+                    +91 9428252181
                   </a>
                   <p className="text-xs text-gray-500">Mon-Sat: 10AM - 8PM</p>
                 </div>
@@ -254,10 +256,10 @@ export default function Footer() {
                   />
                 </svg>
                 <a
-                  href="mailto:info@rajtourism.com"
+                  href="mailto:rajtourisam@gmail.com"
                   className="text-sm text-gray-600 hover:text-blue-600 transition-colors"
                 >
-                  info@rajtourism.com
+                  rajtourisam@gmail.com
                 </a>
               </div>
             </div>
