@@ -770,6 +770,239 @@ export const tours = [
                 meals: ["Breakfast"]
             }
         ]
+    },
+    {
+        id: 212,
+        title: "Hong Kong Highlights",
+        duration: "7D/6N",
+        ...getTourImages('international', 212),
+        location: "Hong Kong & Macau (optional day trip)",
+        price: "On Request",
+        rating: "4.8",
+        reviews: "198",
+        itinerary: [
+            {
+                day: 1,
+                title: "Arrival & Victoria Harbour",
+                description: "Arrive at Hong Kong International Airport and transfer to Tsim Sha Tsui. Evening Star Ferry across Victoria Harbour, Symphony of Lights show and stroll along the Avenue of Stars.",
+                highlights: ["Star Ferry", "Victoria Harbour", "Avenue of Stars"],
+                meals: ["Dinner"]
+            },
+            {
+                day: 2,
+                title: "Hong Kong Disneyland",
+                description: "Full day at Hong Kong Disneyland — rides, parades (Golden Mickeys) and the Momentous nighttime spectacular. Return to city for dinner at Temple Street Night Market.",
+                highlights: ["Disneyland rides", "Golden Mickeys Parade", "Temple Street Night Market"],
+                meals: ["Breakfast", "Dinner"]
+            },
+            {
+                day: 3,
+                title: "Ocean Park Adventure",
+                description: "Explore Ocean Park’s marine exhibits, thrill rides and Water World splash zones. Evening shopping time at Harbour City or Elements Mall.",
+                highlights: ["Ocean Park", "Marine Exhibits", "Harbour City Shopping"],
+                meals: ["Breakfast", "Dinner"]
+            },
+            {
+                day: 4,
+                title: "Victoria Peak & Central",
+                description: "Peak Tram up to Victoria Peak for Sky Terrace 428 panoramic views. Descend via the Mid-Levels Escalator to visit Man Mo Temple and sample Central street food; optional HSBC building photo stop.",
+                highlights: ["Victoria Peak", "Peak Tram", "Man Mo Temple"],
+                meals: ["Breakfast", "Dinner"]
+            },
+            {
+                day: 5,
+                title: "Lantau Island & Big Buddha",
+                description: "Ngong Ping 360 cable car to Tian Tan Buddha and Po Lin Monastery. Visit Tai O fishing village to see stilt houses and enjoy fresh seafood.",
+                highlights: ["Ngong Ping 360", "Tian Tan Buddha", "Tai O Village"],
+                meals: ["Breakfast", "Dinner"]
+            },
+            {
+                day: 6,
+                title: "Macau Day Trip (Optional)",
+                description: "Ferry to Macau for the Ruins of St. Paul’s, Senado Square and Cotai casino strip (Venetian etc.). Return to Hong Kong for evening leisure.",
+                highlights: ["Macau Ferry", "Ruins of St. Paul’s", "Cotai Casinos"],
+                meals: ["Breakfast", "Dinner"]
+            },
+            {
+                day: 7,
+                title: "Markets, Relaxation & Departure",
+                description: "Morning at Stanley Market and Repulse Bay. Optional visit to Ten Thousand Buddhas Monastery before transfer to airport for departure.",
+                highlights: ["Stanley Market", "Repulse Bay", "Departure"],
+                meals: ["Breakfast"]
+            }
+        ]
+    },
+
+    {
+        id: 213,
+        title: "Maldives Retreat",
+        duration: "5D/4N",
+        ...getTourImages('international', 213),
+        location: "Maldives (Male + Resort)",
+        price: "On Request",
+        rating: "4.9",
+        reviews: "214",
+        itinerary: [
+            {
+                day: 1,
+                title: "Arrival & Male City Orientation",
+                description: "Arrive at Malé International Airport and transfer to your resort. Quick Male city visit if time permits — Sultan Park, National Museum, Friday Mosque and fish market — then relax at your resort.",
+                highlights: ["Male City Tour", "Resort Transfer", "Beach Time"],
+                meals: ["Dinner"]
+            },
+            {
+                day: 2,
+                title: "Snorkelling & Water Sports",
+                description: "Enjoy house-reef snorkelling, or try resort water sports such as jet-ski, paddleboarding or kayaking. Afternoon at leisure on the beach.",
+                highlights: ["Snorkelling", "Water Sports", "Beach Relaxation"],
+                meals: ["Breakfast", "Lunch", "Dinner"]
+            },
+            {
+                day: 3,
+                title: "Island Hopping & Local Islands",
+                description: "Island-hopping tour to nearby local islands (example: Maafushi / Gulhi) — experience local island life, sample Maldivian cuisine and pristine sandbanks.",
+                highlights: ["Island Hopping", "Local Culture", "Pristine Beaches"],
+                meals: ["Breakfast", "Lunch", "Dinner"]
+            },
+            {
+                day: 4,
+                title: "Spa & Romantic Experiences",
+                description: "Relax with spa treatments or wellness activities. Optional romantic add-ons: sunset cruise, private beach dining or floating breakfast in your villa (great for honeymooners).",
+                highlights: ["Spa Treatments", "Sunset Cruise", "Private Dining"],
+                meals: ["Breakfast", "Dinner"]
+            },
+            {
+                day: 5,
+                title: "Departure or Extra Leisure",
+                description: "Final morning at leisure for snorkeling or beach time, transfer to Malé for your international flight home.",
+                highlights: ["Last-minute Relaxation", "Resort Checkout", "Airport Transfer"],
+                meals: ["Breakfast"]
+            }
+        ]
+    },
+
+    {
+        id: 214,
+        title: "Nepal Scenic & Cultural",
+        duration: "7D/6N",
+        ...getTourImages('international', 214),
+        location: "Kathmandu • Pokhara • Chitwan • Nagarkot",
+        price: "On Request",
+        rating: "4.7",
+        reviews: "172",
+        itinerary: [
+            {
+                day: 1,
+                title: "Kathmandu Arrival & Temples",
+                description: "Arrive in Kathmandu. Visit Swayambhunath (Monkey Temple) and Pashupatinath to get an introduction to Nepalese spirituality and rituals.",
+                highlights: ["Swayambhunath", "Pashupatinath", "Kathmandu Arrival"],
+                meals: ["Dinner"]
+            },
+            {
+                day: 2,
+                title: "Kathmandu Valley Heritage",
+                description: "Explore Boudhanath Stupa, Patan Durbar Square and Bhaktapur’s medieval squares and pottery streets.",
+                highlights: ["Boudhanath", "Patan Durbar Square", "Bhaktapur"],
+                meals: ["Breakfast", "Dinner"]
+            },
+            {
+                day: 3,
+                title: "Drive to Pokhara",
+                description: "Scenic 6–7 hour drive to Pokhara. Evening stroll along Phewa Lake and Lakeside market.",
+                highlights: ["Phewa Lake", "Lakeside Market", "Scenic Drive"],
+                meals: ["Breakfast", "Dinner"]
+            },
+            {
+                day: 4,
+                title: "Pokhara Adventures & Sunrise",
+                description: "Early Sarangkot sunrise over the Annapurna range. Boat on Phewa Lake to Tal Barahi Temple, visit Devi’s Fall and Gupteshwor Cave.",
+                highlights: ["Sarangkot Sunrise", "Phewa Lake Boating", "Devi's Fall"],
+                meals: ["Breakfast", "Dinner"]
+            },
+            {
+                day: 5,
+                title: "Drive to Chitwan",
+                description: "Drive to Chitwan (approx. 5 hrs). Tharu village walk, canoe ride and evening cultural program. Overnight near Chitwan National Park.",
+                highlights: ["Tharu Village", "Canoe Ride", "Cultural Program"],
+                meals: ["Breakfast", "Dinner"]
+            },
+            {
+                day: 6,
+                title: "Chitwan Safari & Nagarkot",
+                description: "Early jungle jeep safari for wildlife (rhinos, birds, possible tiger sightings). Later drive to Nagarkot for sunset Himalayan panoramas.",
+                highlights: ["Jeep Safari", "Wildlife", "Nagarkot Sunset"],
+                meals: ["Breakfast", "Dinner"]
+            },
+            {
+                day: 7,
+                title: "Nagarkot Sunrise & Departure",
+                description: "Sunrise over the Himalaya in Nagarkot. Return to Kathmandu for final shopping in Thamel before airport transfer.",
+                highlights: ["Himalayan Sunrise", "Thamel Shopping", "Departure"],
+                meals: ["Breakfast"]
+            }
+        ]
+    },
+
+    {
+        id: 215,
+        title: "Bhutan Cultural Journey",
+        duration: "7D/6N",
+        ...getTourImages('international', 215),
+        location: "Paro • Thimphu • Punakha",
+        price: "On Request",
+        rating: "4.9",
+        reviews: "128",
+        itinerary: [
+            {
+                day: 1,
+                title: "Paro Arrival & Dzong",
+                description: "Arrive at Paro Airport. Visit Rinpung Dzong and Kyichu Lhakhang, evening stroll through Paro town.",
+                highlights: ["Rinpung Dzong", "Kyichu Lhakhang", "Paro Arrival"],
+                meals: ["Dinner"]
+            },
+            {
+                day: 2,
+                title: "Tiger’s Nest (Taktsang) Hike",
+                description: "Hike to Taktsang (Tiger’s Nest) Monastery — 4–5 hours round trip. Afternoon visit to Ta Dzong (National Museum).",
+                highlights: ["Tiger's Nest", "Ta Dzong Museum", "Mountain Hike"],
+                meals: ["Breakfast", "Dinner"]
+            },
+            {
+                day: 3,
+                title: "Dochula Pass & Thimphu",
+                description: "Drive to Thimphu via Dochula Pass (108 stupas and panoramic views). Explore Thimphu market and local sights.",
+                highlights: ["Dochula Pass", "Thimphu Market", "Scenic Drive"],
+                meals: ["Breakfast", "Dinner"]
+            },
+            {
+                day: 4,
+                title: "Thimphu Cultural Tour",
+                description: "Visit Buddha Dordenma, Tashichho Dzong, Folk Heritage Museum and Takin Preserve; enjoy local handicraft shops.",
+                highlights: ["Buddha Dordenma", "Tashichho Dzong", "Folk Heritage Museum"],
+                meals: ["Breakfast", "Dinner"]
+            },
+            {
+                day: 5,
+                title: "Drive to Punakha",
+                description: "Scenic drive to Punakha (approx. 2 hrs). Visit Punakha Dzong at the river confluence and Chimi Lhakhang (Fertility Temple).",
+                highlights: ["Punakha Dzong", "Chimi Lhakhang", "River Confluence"],
+                meals: ["Breakfast", "Dinner"]
+            },
+            {
+                day: 6,
+                title: "Punakha Excursions & Return",
+                description: "Rice field walk and Khamsum Yulley Namgyal Chorten hike. Return to Paro with scenic stops en route.",
+                highlights: ["Khamsum Yulley Namgyal", "Rice Field Walk", "Scenic Return"],
+                meals: ["Breakfast", "Dinner"]
+            },
+            {
+                day: 7,
+                title: "Paro Leisure & Departure",
+                description: "Free morning for shopping or optional Chele La Pass visit (weather permitting). Transfer to Paro Airport for departure.",
+                highlights: ["Shopping", "Optional Chele La Pass", "Departure"],
+                meals: ["Breakfast"]
+            }
+        ]
     }
 ];
 
