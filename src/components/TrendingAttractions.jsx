@@ -1,16 +1,21 @@
 import React, { useEffect, useState } from "react";
+import paris from "../assets/paris.jpg";
+import tokyo from "../assets/tokyo.jpg";
+import switzerland from "../assets/switzerland.jpg";
+import bangkok from "../assets/bangkok.jpg";
+import greece from "../assets/greece.jpg";
 
 // TEMP images (replace with real)
 const destinations = [
   { id: 1, image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&q=80", title: "Dubai", country: "UAE" },
   { id: 2, image: "https://images.unsplash.com/photo-1528127269322-539801943592?w=800&q=80", title: "Vietnam", country: "Asia" },
   { id: 3, image: "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=800&q=80", title: "Singapore", country: "Asia" },
-  { id: 4, image: "https://images.unsplash.com/photo-1582672060674-bc2bd808a8b5?w=800&q=80", title: "Paris", country: "France" },
+  { id: 4, image: paris , title: "Paris", country: "France" },
   { id: 5, image: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=800&q=80", title: "London", country: "UK" },
-  { id: 6, image: "https://images.unsplash.com/photo-1534351590666-13e3e96b5017?w=800&q=80", title: "Tokyo", country: "Japan" },
-  { id: 7, image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&q=80", title: "Dubai", country: "UAE" },
-  { id: 8, image: "https://images.unsplash.com/photo-1528127269322-539801943592?w=800&q=80", title: "Vietnam", country: "Asia" },
-  { id: 9, image: "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=800&q=80", title: "Singapore", country: "Asia" },
+  { id: 6, image: tokyo , title: "Tokyo", country: "Japan" },
+  { id: 7, image: switzerland , title: "Switzerland", country: "Zurich" },
+  { id: 8, image: bangkok , title: "Bangkok", country: "Disneyland" },
+  { id: 9, image: greece , title: "greece", country: "Athens" },
 ];
 
 // Group destinations into slides of 3 for desktop
@@ -21,7 +26,7 @@ for (let i = 0; i < destinations.length; i += 3) {
 
 // Group destinations into slides of 2 for mobile
 const slidesMobile = [];
-for (let i = 0; i < destinations.length; i += 2) {
+for (let i = 0; i < destinations.length-1; i += 2) {
   slidesMobile.push(destinations.slice(i, i + 2));
 }
 

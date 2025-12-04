@@ -152,8 +152,8 @@ export default function OurLocation() {
                     </span>
                     <div>
                       <p className="font-semibold text-gray-800">Contact</p>
-                      <p className="text-gray-600">+91 98250 12345</p>
-                      <p className="text-gray-600">info@rajtourism.com</p>
+                      <p className="text-gray-600">+91 94282 52181</p>
+                      <p className="text-gray-600">rajtourisam@gmail.com</p>
                     </div>
                   </div>
                 </div>
