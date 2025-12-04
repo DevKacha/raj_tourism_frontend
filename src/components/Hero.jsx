@@ -1,10 +1,12 @@
 // src/components/Hero.jsx
 import React, { useState, useEffect } from "react";
-import heroImgPath from "../assets/hero.jpg";
+import heroImgPath from "../assets/hero2.jpeg";
 import gujaratImg from "../assets/gujarat.jpg"
 import kashmirImg from "../assets/kasmir.jpg";
 import goaImg from "../assets/goa.jpg";
 import dubaiImg from "../assets/dubai.jpg";
+import goa from "../assets/india/id100/main.jpg"
+
 
 export default function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -66,7 +68,7 @@ export default function Hero() {
     {
       title: "Discover Goa",
       subtitle: "Explore the vibrant culture and heritage",
-      image: heroImgPath
+      image: goa
     },
     {
       title: "Journey Through India",
