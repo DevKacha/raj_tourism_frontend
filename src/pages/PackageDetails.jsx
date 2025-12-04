@@ -367,7 +367,7 @@ const PackageDetails = () => {
 
     doc.setFontSize(10);
     doc.setTextColor(...gray);
-    doc.text("Contact: +91 98250 12345", 190, 15, { align: "right" });
+    doc.text("Contact: +91 94282 52181", 190, 15, { align: "right" });
     doc.text("Email: rajtourisam@gmail.com", 190, 20, { align: "right" });
     doc.text("Adress: 112, Cosmo Complex, Mahila College", 190, 25, { align: "right" });
     doc.text("Circle, Kalawad Road, Rajkot-Gujarat", 190, 30, { align: "right" });
