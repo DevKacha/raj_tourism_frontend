@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 export default function OurLocation() {
   const [showCopied, setShowCopied] = useState(false);
-  const phoneNumber = "+919825012345";
+  const phoneNumber = "+919428252181";
 
   const handleCallClick = (e) => {
     e.preventDefault();
