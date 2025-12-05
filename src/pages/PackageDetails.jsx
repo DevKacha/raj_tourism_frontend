@@ -264,13 +264,13 @@ const PackageDetails = () => {
   let inclusions = isInternational
     ? [...internationalInclusions]
     : pkg.id >= 101
-    ? [...indiaInclusions]
-    : [...gujaratInclusions];
+      ? [...indiaInclusions]
+      : [...gujaratInclusions];
   const exclusions = isInternational
     ? internationalExclusions
     : pkg.id >= 101
-    ? indiaExclusions
-    : gujaratExclusions;
+      ? indiaExclusions
+      : gujaratExclusions;
 
   // Check if Cruise should be included for international packages
   if (isInternational) {
@@ -429,6 +429,44 @@ const PackageDetails = () => {
 
     yPos = doc.lastAutoTable.finalY + 15;
 
+    // Add closing message after itinerary
+    if (yPos > 260) {
+      doc.addPage();
+      yPos = 20;
+    }
+
+    yPos += 10;
+
+    // Add decorative top line
+    doc.setDrawColor(234, 88, 12); // Orange color
+    doc.setLineWidth(0.3);
+    doc.line(60, yPos, 150, yPos);
+
+    yPos += 8;
+
+    // Closing message with enhanced styling
+    doc.setFontSize(16);
+    doc.setFont(undefined, "italic");
+    doc.setTextColor(180, 83, 9); // Rich orange-brown color
+
+    const closingLine1 = "The beautiful journey with Raj Tourism comes to an end,";
+    const closingLine2 = "leaving behind a treasure of sweet memories to cherish forever...";
+
+    doc.text(closingLine1, 105, yPos, { align: "center" });
+    yPos += 7;
+    doc.text(closingLine2, 105, yPos, { align: "center" });
+
+    yPos += 8;
+
+    // Add decorative bottom line
+    doc.setDrawColor(234, 88, 12); // Orange color
+    doc.setLineWidth(0.3);
+    doc.line(60, yPos, 150, yPos);
+
+    // Reset font style
+    doc.setFont(undefined, "normal");
+    yPos += 15;
+
     // Inclusions & Exclusions
     if (yPos > 250) {
       doc.addPage();
@@ -556,11 +594,10 @@ const PackageDetails = () => {
                 <button
                   key={idx}
                   onClick={() => setCurrentImageIndex(idx)}
-                  className={`flex-shrink-0 w-24 h-20 rounded-lg overflow-hidden border-2 transition-all duration-300 ${
-                    currentImageIndex === idx
-                      ? "border-orange-500 scale-105 shadow-lg"
-                      : "border-transparent opacity-60 hover:opacity-100 hover:scale-105 hover:border-orange-300"
-                  }`}
+                  className={`flex-shrink-0 w-24 h-20 rounded-lg overflow-hidden border-2 transition-all duration-300 ${currentImageIndex === idx
+                    ? "border-orange-500 scale-105 shadow-lg"
+                    : "border-transparent opacity-60 hover:opacity-100 hover:scale-105 hover:border-orange-300"
+                    }`}
                 >
                   <img
                     src={img}
@@ -633,11 +670,10 @@ const PackageDetails = () => {
                   <div
                     key={index}
                     ref={(el) => (cardRefs.current[index] = el)}
-                    className={`border border-gray-200 rounded-xl overflow-hidden transition-all duration-500 transform origin-top ${
-                      activeDay === index
-                        ? "shadow-2xl border-orange-300 scale-[1.02]"
-                        : "shadow-sm hover:shadow-lg hover:border-orange-200"
-                    }`}
+                    className={`border border-gray-200 rounded-xl overflow-hidden transition-all duration-500 transform origin-top ${activeDay === index
+                      ? "shadow-2xl border-orange-300 scale-[1.02]"
+                      : "shadow-sm hover:shadow-lg hover:border-orange-200"
+                      }`}
                   >
                     <button
                       onClick={() =>
@@ -648,18 +684,16 @@ const PackageDetails = () => {
                       <div className="flex items-center gap-6">
                         {/* Big Day Text */}
                         <div
-                          className={`flex-shrink-0 transition-all duration-500 ${
-                            activeDay === index
-                              ? "scale-110 translate-x-2"
-                              : "group-hover:scale-105"
-                          }`}
+                          className={`flex-shrink-0 transition-all duration-500 ${activeDay === index
+                            ? "scale-110 translate-x-2"
+                            : "group-hover:scale-105"
+                            }`}
                         >
                           <h3
-                            className={`text-2xl sm:text-3xl font-black uppercase tracking-tight ${
-                              activeDay === index
-                                ? "text-orange-600"
-                                : "text-gray-300 group-hover:text-orange-300"
-                            }`}
+                            className={`text-2xl sm:text-3xl font-black uppercase tracking-tight ${activeDay === index
+                              ? "text-orange-600"
+                              : "text-gray-300 group-hover:text-orange-300"
+                              }`}
                           >
                             DAY-{day.day}
                           </h3>
@@ -667,18 +701,16 @@ const PackageDetails = () => {
 
                         {/* Title */}
                         <div
-                          className={`border-l-2 pl-6 transition-colors duration-300 ${
-                            activeDay === index
-                              ? "border-orange-200"
-                              : "border-gray-100 group-hover:border-orange-100"
-                          }`}
+                          className={`border-l-2 pl-6 transition-colors duration-300 ${activeDay === index
+                            ? "border-orange-200"
+                            : "border-gray-100 group-hover:border-orange-100"
+                            }`}
                         >
                           <h3
-                            className={`font-bold text-lg sm:text-xl transition-colors duration-300 ${
-                              activeDay === index
-                                ? "text-gray-900"
-                                : "text-gray-600 group-hover:text-gray-900"
-                            }`}
+                            className={`font-bold text-lg sm:text-xl transition-colors duration-300 ${activeDay === index
+                              ? "text-gray-900"
+                              : "text-gray-600 group-hover:text-gray-900"
+                              }`}
                           >
                             {day.title}
                           </h3>
@@ -686,11 +718,10 @@ const PackageDetails = () => {
                       </div>
 
                       <div
-                        className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${
-                          activeDay === index
-                            ? "bg-orange-100 text-orange-600 rotate-180"
-                            : "bg-gray-50 text-gray-400 group-hover:bg-orange-50 group-hover:text-orange-500"
-                        }`}
+                        className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${activeDay === index
+                          ? "bg-orange-100 text-orange-600 rotate-180"
+                          : "bg-gray-50 text-gray-400 group-hover:bg-orange-50 group-hover:text-orange-500"
+                          }`}
                       >
                         <ChevronDown className="w-5 h-5" />
                       </div>

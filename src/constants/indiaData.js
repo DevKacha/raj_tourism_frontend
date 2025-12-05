@@ -81,14 +81,14 @@ export const tours = [
                 title: "Jaisalmer",
                 description: "After Breakfast head towards Jaisalmer, relax at Tent City, Spend your afternoon on an adventurous jeep safari & camel ride across the desert, followed by vibrant cultural activities at night under the starlit sky after the dinner.",
                 highlights: ["Jaisalmer","Tent-city","Desert Safari"],
-                meals: ["Dinner"]
+                meals: ["Breakfast", "Dinner"]
             },
             {
                 day: 3,
                 title: "Jaisalmer",
                 description: "After breakfast, drive towards the historic Longewala border (Indo/Pak), continue to Tanot Mata Temple, explore the Pakistan Canal from 1971, and conclude the day with dinner.",
                 highlights: ["Longewala Border","Tanot Mata Temple"],
-                meals: ["Dinner"]
+                meals: ["Breakfast","Dinner"]
             },
             {
                 day: 4,

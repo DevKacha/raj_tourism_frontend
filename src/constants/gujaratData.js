@@ -14,9 +14,9 @@ export const tours = [
     {
         id: 1,
         title: "Gujarat Heritage & Wildlife",
-        duration: "5D/4N",
+        duration: "6D/5N",
         ...getTourImages('gujarat', 1),
-        location: "Ahmedabad, Dwarka, Somnath, Gir",
+        location: "Ahmedabad, Dwarka, Somnath, Gir, Virpur, Rajkot",
         price: "On Request",
         rating: "4.8",
         reviews: "124",
@@ -47,13 +47,20 @@ export const tours = [
                 title: "Somnath to Gir National Park",
                 description: "Head to Sasan Gir for a jungle safari to see Asiatic lions. Enjoy wildlife safari and stay overnight near Gir.",
                 highlights: ["Gir Jungle Safari", "Asiatic Lions", "Wildlife"],
-                meals: ["Breakfast", "Lunch", "Dinner"]
+                meals: ["Breakfast", "Dinner"]
             },
             {
                 day: 5,
-                title: "Gir to Junagadh & Return",
-                description: "Visit Uparkot Fort, Ashok Rock Edict, and Mahabat Maqbara in Junagadh. Travel back to Ahmedabad for onward journey.",
-                highlights: ["Uparkot Fort", "Mahabat Maqbara", "Departure"],
+                title: "Gir to Junagadh - Virpur -Rajkot",
+                description: "Visit Uparkot Fort, Ashok Rock Edict, and Mahabat Maqbara in Junagadh. Travel to Rajkot enroute get Divine Darshan of Jalaram Bappa & Take Prasadh there (traditional khichdi & kadhi).",
+                highlights: ["Uparkot Fort", "Mahabat Maqbara", "Virpur"],
+                meals: ["Breakfast","Dinner"]
+            },
+            {
+                day: 6,
+                title: "Rajot sightseen and Departure",
+                description: "Take Breakfast at Hotel, then visit Local Sightseen, after that departure",
+                highlights: [ "Local sight seen", "Departure"],
                 meals: ["Breakfast"]
             }
         ]
@@ -80,14 +87,14 @@ export const tours = [
                 title: "Bhuj to Dhordo (Rann Utsav)",
                 description: "Drive to Dhordo (Tent City). Visit local craft villages like Bhujodi and Hodka. Evening visit to the White Rann salt desert for sunset views. Enjoy cultural performances and dinner at the Tent City.",
                 highlights: ["Rann Utsav", "White Rann Sunset", "Craft Villages"],
-                meals: ["Breakfast", "Lunch", "Dinner"]
+                meals: ["Breakfast", "Dinner"]
             },
             {
                 day: 3,
                 title: "Kala Dungar & Surroundings",
                 description: "Visit Kala Dungar (Black Hill) for panoramic views. See India Bridge near the Indo-Pak border. Explore nearby handicraft villages such as Gandhi Nu Gaam. Return to Tent City.",
                 highlights: ["Kala Dungar", "India Bridge", "Handicraft Villages"],
-                meals: ["Breakfast", "Lunch", "Dinner"]
+                meals: ["Breakfast", "Dinner"]
             },
             {
                 day: 4,
@@ -99,7 +106,7 @@ export const tours = [
             {
                 day: 5,
                 title: "Narayan Sarovar & Departure",
-                description: "Visit Narayan Sarovar if time permits. End of tour and departure.",
+                description: "Visit Narayan Sarovar if time permits optinal (Mata no madh). End of tour and departure.",
                 highlights: ["Narayan Sarovar", "Departure"],
                 meals: ["Breakfast"]
             }

@@ -219,6 +219,30 @@ export default function Sidebar({ open, onClose }) {
           </Link>
 
           <Link
+            to="/contact"
+            onClick={onClose}
+            className="group relative flex items-center justify-between py-4 px-5 rounded-xl hover:bg-gradient-to-r hover:from-pink-50 hover:to-transparent transition-all duration-300 transform hover:translate-x-2 overflow-hidden"
+          >
+            <div className="absolute left-0 top-0 bottom-0 w-1 bg-yellow-600 transform scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-top rounded-r"></div>
+            <span className="text-base font-bold text-gray-800 group-hover:text-yellow-600 transition-colors duration-200">
+              Contact Us
+            </span>
+            <svg
+              className="w-5 h-5 text-gray-500 group-hover:text-yellow-600 group-hover:translate-x-1 transition-all duration-200"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </Link>
+
+          <Link
             to="/payment-qr"
             onClick={onClose}
             className="group relative flex items-center justify-between py-4 px-5 rounded-xl hover:bg-gradient-to-r hover:from-indigo-50 hover:to-transparent transition-all duration-300 transform hover:translate-x-2 overflow-hidden"

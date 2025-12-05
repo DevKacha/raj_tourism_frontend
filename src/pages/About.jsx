@@ -65,7 +65,7 @@ const About = () => {
 
       setStats({
         years: Math.floor(19 * progress),
-        clients: Math.floor(5000 * progress),
+        clients: Math.floor(25000 * progress),
         destinations: Math.floor(150 * progress),
       });
 
@@ -492,7 +492,7 @@ const About = () => {
               {
                 icon: Shield,
                 title: "Visa Services",
-                desc: "Passport & visa assistance",
+                desc: "Passport & visa formalities",
                 color: "orange",
               },
               {

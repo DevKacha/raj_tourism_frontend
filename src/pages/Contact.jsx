@@ -32,9 +32,9 @@ export default function Contact() {
             <h3 className="text-2xl font-bold text-gray-800 mb-4">Visit Our Office</h3>
             <p className="text-gray-600 font-semibold mb-2">RAJ TOURISM</p>
             <p className="text-gray-600 leading-relaxed">
-              123, Tourism Plaza,<br />
-              Near Main Square,<br />
-              Rajkot, Gujarat, India - 360001
+              112, Cosmo Complex, Mahila College<br />
+              Circle, Kalawad Road, Rajkot - 360 001,<br />
+              Gujarat
             </p>
           </div>
 
@@ -49,10 +49,17 @@ export default function Contact() {
               <span className="font-medium">Available 24/7</span>
             </div>
             <a
-              href="tel:+919876543210"
+              href="tel:+917043497043"
               className="text-2xl font-bold text-orange-600 hover:text-orange-700 transition-colors"
             >
-              +91 98765 43210
+              +91 70434 97043
+            </a>
+            <br />
+            <a
+              href="tel:+919636898368"
+              className="text-2xl font-bold text-orange-600 hover:text-orange-700 transition-colors"
+            >
+              +91 96368 98368
             </a>
           </div>
 
@@ -64,15 +71,15 @@ export default function Contact() {
             <h3 className="text-2xl font-bold text-gray-800 mb-4">Email Us</h3>
             <p className="text-gray-600 mb-3">Drop us a line anytime</p>
             <a
-              href="mailto:info@rajtourism.com"
+              href="mailto:rajtourisam@gmail.com"
               className="text-xl font-semibold text-orange-600 hover:text-orange-700 transition-colors break-all"
             >
-              info@rajtourism.com
+              rajtourisam@gmail.com
             </a>
           </div>
         </div>
 
-       
+
 
         {/* Why Choose Us Section */}
         <div className="mt-16 bg-gradient-to-r from-orange-100 to-orange-50 rounded-2xl p-12">
@@ -87,7 +94,7 @@ export default function Contact() {
             </div>
             <div className="text-center">
               <div className="bg-orange-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-white text-2xl font-bold">15+</span>
+                <span className="text-white text-2xl font-bold">19+</span>
               </div>
               <h4 className="font-bold text-lg mb-2">Years of Experience</h4>
               <p className="text-gray-600">Trusted by thousands of happy travelers</p>

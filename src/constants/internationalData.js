@@ -31,8 +31,8 @@ export const tours = [
             {
                 day: 2,
                 title: "Coral Island Tour",
-                description: "Breakfast at your Hotel. Pick-up and transfer to Pattaya Beach. Speedboat ride to Koh Larn (Coral Island). In the Afternoon, Thai lunch at a beachfront open-air restaurant. Return to Pattaya by speedboat and Hotel drop-off. Overnight stay at your Hotel.",
-                highlights: ["Coral Island", "Speedboat Ride", "Beachfront Lunch"],
+                description: "Breakfast at your Hotel. Pick-up and transfer to Pattaya Beach. Speedboat ride to Koh Larn (Coral Island). In the Afternoon, Thai lunch at a beachfront open-air restaurant. Return to Pattaya by speedboat and Hotel drop-off and enjoy Alcazar show, Walking street & Overnight stay at your Hotel.",
+                highlights: ["Coral Island", "Speedboat Ride","Alcazar show","Walking street", "Beachfront Lunch"],
                 meals: ["Breakfast", "Lunch", "Dinner"]
             },
             {
@@ -85,8 +85,8 @@ export const tours = [
             {
                 day: 2,
                 title: "Half Day Coral Island Tour",
-                description: "Breakfast at hotel. Half-day Coral Island tour with lunch. Enjoy water sports (parasailing, snorkeling, jet ski – at own cost). Indian lunch included on the island. Return to Pattaya by afternoon. Evening free for shopping or optional walking street exploration.",
-                highlights: ["Coral Island", "Water Sports", "Indian Lunch"],
+                description: "Breakfast at hotel. Half-day Coral Island tour with lunch. Enjoy water sports (parasailing, snorkeling, jet ski – at own cost). Indian lunch included on the island. Return to Pattaya by afternoon. Evening enjoy Alcazar Show or optional walking street exploration.",
+                highlights: ["Coral Island", "Water Sports", "Indian Lunch","Alcazar Show"],
                 meals: ["Breakfast", "Lunch", "Dinner"]
             },
             {
@@ -160,8 +160,8 @@ export const tours = [
             {
                 day: 2,
                 title: "Coral Island Tour",
-                description: "Breakfast at Hotel. Full day Coral Island Tour with Local Lunch on SIC Basis (Exclude National Park Fees). Return to hotel and relax. Overnight stay in Pattaya.",
-                highlights: ["Coral Island", "Local Lunch", "Beach Activities"],
+                description: "Breakfast at Hotel. Full day Coral Island Tour with Local Lunch on SIC Basis (Exclude National Park Fees). Return to hotel and enjoy Alcazar show & walking street, Overnight stay in Pattaya.",
+                highlights: ["Coral Island", "Local Lunch", "Alcazar Show","Walking street", "Beach Activities"],
                 meals: ["Breakfast", "Lunch", "Dinner"]
             },
             {

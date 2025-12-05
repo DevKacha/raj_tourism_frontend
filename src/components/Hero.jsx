@@ -219,11 +219,11 @@ export default function Hero() {
             <div className={`mt-8 sm:mt-12 grid grid-cols-3 gap-3 sm:gap-4 md:gap-6 max-w-lg transform transition-all duration-1000 delay-800 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
               }`}>
               <div className="text-center p-3 sm:p-4 rounded-lg sm:rounded-xl bg-white/20 backdrop-blur-sm border border-white/20 hover:bg-white/30 transition-all duration-300 shadow-sm">
-                <div className="text-2xl sm:text-3xl font-bold text-white drop-shadow">500+</div>
+                <div className="text-2xl sm:text-3xl font-bold text-white drop-shadow">25000+</div>
                 <div className="text-xs sm:text-sm text-white/90 mt-1">Happy Clients</div>
               </div>
               <div className="text-center p-3 sm:p-4 rounded-lg sm:rounded-xl bg-white/20 backdrop-blur-sm border border-white/20 hover:bg-white/30 transition-all duration-300 shadow-sm">
-                <div className="text-2xl sm:text-3xl font-bold text-white drop-shadow">50+</div>
+                <div className="text-2xl sm:text-3xl font-bold text-white drop-shadow">150+</div>
                 <div className="text-xs sm:text-sm text-white/90 mt-1">Destinations</div>
               </div>
               <div className="text-center p-3 sm:p-4 rounded-lg sm:rounded-xl bg-white/20 backdrop-blur-sm border border-white/20 hover:bg-white/30 transition-all duration-300 shadow-sm">

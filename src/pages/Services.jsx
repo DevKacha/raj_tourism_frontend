@@ -42,8 +42,8 @@ export default function Services() {
     },
     {
       icon: FileText,
-      title: "Visa Assistance",
-      desc: "Expert guidance for tourist, business, and student visas. We simplify the documentation process for you.",
+      title: "Passport & visa formalities",
+      desc: "Expert guidance for tourist, business, and student visas & passports. We simplify the documentation process for you.",
       iconBg: "bg-red-100",
       iconColor: "text-red-600"
     },

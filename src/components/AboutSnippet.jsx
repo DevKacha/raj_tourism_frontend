@@ -125,7 +125,7 @@ export default function AboutSnippet() {
                     Travelers
                   </span>
                   <span className="text-lg font-black text-white group-hover:scale-110 transition-transform duration-300">
-                    2500+
+                    25000+
                   </span>
                 </div>
                 <div className="flex justify-between items-center group hover:bg-white/10 px-2 py-1 rounded transition-colors duration-300">
