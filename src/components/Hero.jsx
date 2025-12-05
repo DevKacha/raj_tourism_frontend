@@ -15,7 +15,7 @@ export default function Hero() {
   const [isTyping, setIsTyping] = useState(true);
   const [showCopied, setShowCopied] = useState(false);
 
-  const phoneNumber = "+919825012345"; // Raj Tourism phone number
+  const phoneNumber = "+919428252181"; // Raj Tourism phone number
 
   // Handle Explore Now click - scroll to ExploreIndia section
   const handleExploreClick = (e) => {
