@@ -34,7 +34,7 @@ export default function Footer() {
 
             <div className="flex gap-3">
               <a
-                href="#"
+                href="https://x.com/_rajtourism_?t=o8FMYSZYYlPv2nBHNsGJBw&s=08"
                 className="w-9 h-9 bg-gray-100 hover:bg-blue-600 text-gray-600 hover:text-white rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg"
               >
                 {/* Twitter */}
@@ -48,7 +48,7 @@ export default function Footer() {
               </a>
 
               <a
-                href="#"
+                href="https://www.facebook.com/share/17mganMssV/?mibextid=wwXIfr"
                 className="w-9 h-9 bg-gray-100 hover:bg-blue-600 text-gray-600 hover:text-white rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg"
               >
                 {/* Facebook */}
@@ -62,7 +62,7 @@ export default function Footer() {
               </a>
 
               <a
-                href="#"
+                href="https://www.instagram.com/rajtourismrajkot?igsh=N3RlaXMxcGxreTVu&utm_source=qr"
                 className="w-9 h-9 bg-gray-100 hover:bg-pink-600 text-gray-600 hover:text-white rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg"
               >
                 {/* Instagram */}
@@ -75,19 +75,6 @@ export default function Footer() {
                 </svg>
               </a>
 
-              <a
-                href="#"
-                className="w-9 h-9 bg-gray-100 hover:bg-blue-700 text-gray-600 hover:text-white rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg"
-              >
-                {/* LinkedIn */}
-                <svg
-                  className="w-4 h-4"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"></path>
-                </svg>
-              </a>
             </div>
           </div>
 
