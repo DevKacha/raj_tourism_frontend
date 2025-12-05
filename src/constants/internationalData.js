@@ -372,10 +372,10 @@ export const tours = [
     },
     {
         id: 206,
-        title: "Singapore Malaysia Bangkok Pattaya",
-        duration: "12D/11N",
+        title: "Singapore Malaysia Bangkok Pattaya Karabi",
+        duration: "13D/12N",
         ...getTourImages('international', 206),
-        location: "Singapore, Malaysia, Thailand",
+        location: "Singapore, Malaysia, Thailand, Bangkok, Pattaya, Karabi",
         price: "On Request",
         rating: "5.0",
         reviews: "245",
@@ -459,8 +459,15 @@ export const tours = [
             },
             {
                 day: 12,
-                title: "Departure from Phuket to Bangkok",
-                description: "Transfer to airport for your flight home.",
+                title: "Phuket to Karabi",
+                description: "After taking Breakfast, trip to Karabi by Ferry or Road with night stay",
+                highlights: ["karabi island"],
+                meals: ["Breakfast","Dinner"]
+            },
+            {
+                day: 13,
+                title: "Departure from  Bangkok",
+                description: "After Breakfast, transfer to Bangkok airport for your flight home.",
                 highlights: ["Airport Transfer", "Departure"],
                 meals: ["Breakfast"]
             }
@@ -479,50 +486,50 @@ export const tours = [
             {
                 day: 1,
                 title: "Downtown Dubai Highlights",
-                description: "Visit the iconic Burj Khalifa, the world’s tallest building. Experience the observation deck views from Level 124 or Level 148. Explore the Dubai Mall, the world’s largest shopping mall. Watch the Dubai Fountain evening light and music show.",
-                highlights: ["Burj Khalifa", "Dubai Mall", "Fountain Show"],
+                description: "Explore the Dubai Mall, the world’s largest shopping mall. Watch the Dubai Fountain evening light and music show.",
+                highlights: [ "Dubai Mall", "Fountain Show"],
                 meals: ["Dinner"]
             },
             {
                 day: 2,
                 title: "Dubai Heritage & Modern Marvels",
-                description: "Visit Dubai Frame to see panoramic views of Old and New Dubai. Explore the Museum of the Future. Visit Old Dubai’s Al Seef district and the Gold Souk for traditional shopping experience. Spend time at Dubai Marina.",
-                highlights: ["Dubai Frame", "Museum of the Future", "Gold Souk"],
+                description: "Visit the iconic Burj Khalifa, the world’s tallest building. Experience the observation deck views from Level 124. & Visit Dubai Frame to see panoramic views of Old and New Dubai. Explore the Museum of the Future, then Spend time at Dubai Marina.",
+                highlights: ["Burj Khalifa","Dubai Frame", "Museum of the Future", "Dubai marina"],
                 meals: ["Breakfast", "Dinner"]
             },
             {
                 day: 3,
                 title: "Beach and Desert Safari",
-                description: "Relax at Jumeirah Beach or visit entertainment venues like Aya Universe. Experience a desert safari with dune bashing, camel rides, sandboarding, and an optional overnight desert camp stay.",
+                description: "Relax at Jumeirah Beach or visit entertainment venues like Aya Universe. Experience a desert safari with dune bashing, camel rides, sandboarding, and night stay at hotel.",
                 highlights: ["Jumeirah Beach", "Desert Safari", "Dune Bashing"],
-                meals: ["Breakfast", "Dinner"]
+                meals: ["Breakfast","Lunch", "Dinner"]
             },
             {
                 day: 4,
                 title: "Iconic Attractions and Gardens",
-                description: "Visit Burj Al Arab for photos or afternoon tea. Explore Dubai Miracle Garden (open October to April). Visit Global Village in the evening for cultural pavilions, cuisine, and rides.",
-                highlights: ["Burj Al Arab", "Miracle Garden", "Global Village"],
+                description: "Visit Burj Al Arab for photos or afternoon tea. Explore Dubai Miracle Garden (open October to April). Visit Global Village in the evening for cultural pavilions, cuisine, and rides. Enjoy a yacht ride (or The Cruise) through Dubai Marina with nightlife views.",
+                highlights: ["Burj Al Arab", "Miracle Garden", "Global Village", "yatch ride","The Cruise"],
                 meals: ["Breakfast", "Dinner"]
             },
             {
                 day: 5,
                 title: "Theme Parks and Attractions",
-                description: "Spend a day at Legoland Theme Park or Warner Bros theme park in Abu Dhabi. Explore Atlantis The Palm and Lost Chambers Aquarium.",
+                description: "Visit Sheikh Zayed Mosque in Abu Dhabi or the Louvre Abu Dhabi and visit to Ferrari Park enroute, then overnight stay at Abu Dhabi ",
                 highlights: ["Theme Parks", "Atlantis The Palm", "Lost Chambers"],
                 meals: ["Breakfast", "Dinner"]
             },
             {
                 day: 6,
-                title: "Shopping and Nightlife",
-                description: "Shop at Meena Bazaar, Gold Souk, and Ibn Battuta Mall. Experience Glow Garden and Dino Park after dark. Enjoy a yacht ride through Dubai Marina with nightlife views.",
+                title: "Shopping and Stay at Lapita Resort",
+                description: "Shop at Meena Bazaar, Gold Souk, and Ibn Battuta Mall. Experience Glow Garden and Dino Park after dark.Then Enjoy night stay at famous Lapita Resort",
                 highlights: ["Shopping", "Glow Garden", "Yacht Ride"],
                 meals: ["Breakfast", "Dinner"]
             },
             {
                 day: 7,
-                title: "Cultural Sites and Departure",
-                description: "Visit Sheikh Zayed Mosque in Abu Dhabi or the Louvre Abu Dhabi. Visit Ferrari World theme park. Depart from Dubai International Airport.",
-                highlights: ["Sheikh Zayed Mosque", "Ferrari World", "Departure"],
+                title: "Departure",
+                description: "After Breakfast, Depart from Dubai International Airport.",
+                highlights: ["Departure"],
                 meals: ["Breakfast"]
             }
         ]
