@@ -75,7 +75,7 @@ export default function PaymentQR() {
                   RAJ TOURISM
                 </h4>
                 <p className="text-xl font-semibold text-blue-600 mb-1">
-                  PVT. LTD.
+                  Dream Holiday, Think Raj
                 </p>
                 <p className="text-lg text-gray-700 mb-3">
                   DOMESTIC & INTERNATIONAL TOURS

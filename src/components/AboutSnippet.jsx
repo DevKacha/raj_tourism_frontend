@@ -2,7 +2,7 @@ import { useState } from "react";
 
 export default function AboutSnippet() {
   const [showCopied, setShowCopied] = useState(false);
-  const phoneNumber = "+919825012345";
+  const phoneNumber = "+919428252181";
 
   // Handle Call button click - copy on desktop, call on mobile
   const handleCallClick = (e) => {
@@ -162,14 +162,14 @@ export default function AboutSnippet() {
             <div className="prose prose-gray max-w-none mb-5">
               <p className="text-sm text-gray-700 leading-relaxed mb-3">
                 <span className="font-bold text-gray-900">Raj Tourism</span> is
-                your trusted local travel specialist for Gujarat and all of
-                India. We believe that travel is not just about visiting
+                your trusted travel specialist for Domestic and 
+                International tours. We believe that travel is not just about visiting
                 places—it's about experiencing cultures, creating memories, and
                 discovering stories that last a lifetime.
               </p>
 
               <p className="text-sm text-gray-700 leading-relaxed">
-                With over a decade of experience, we specialize in crafting
+                With over a two decade of experience, we specialize in crafting
                 personalized itineraries that showcase the best of Gujarat's
                 heritage, India's diversity, and beyond.
               </p>
@@ -218,7 +218,7 @@ export default function AboutSnippet() {
                 </div>
                 <div>
                   <p className="font-bold text-gray-900 text-xs leading-tight">
-                    Tailored Trips
+                    Customised Trips
                   </p>
                 </div>
               </div>
